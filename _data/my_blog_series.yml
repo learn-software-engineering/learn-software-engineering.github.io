@@ -1,0 +1,12 @@
+title: The series title
+description: The series description text
+sections:
+  - label: First section
+    items:
+      - title: First Post - First Section
+      - title: First Post - First Section
+  - label: Second Section
+    items:
+      - title: First Post - Second Section
+      - title: Second Post - Second Section
+      - title: Third Post - Second Section
