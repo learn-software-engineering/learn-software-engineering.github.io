@@ -1,5 +1,6 @@
 ---
 title: "Post: Standard"
+author: Julian Nonino
 excerpt_separator: "<!--more-->"
 categories:
   - Blog
