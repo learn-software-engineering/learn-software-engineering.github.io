@@ -1,5 +1,7 @@
 # Learn Software Engineering website
 
+Website based on the Jekyll theme [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/).
+
 ## TODO
 
 - Write about how to build this project.
