@@ -6,3 +6,9 @@
 - Explain how to test locally.
 - Explain how this site is published.
 - Explain how to contribute.
+
+
+
+
+
+https://search.google.com/search-console

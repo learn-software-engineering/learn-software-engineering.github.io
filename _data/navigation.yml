@@ -1,7 +1,9 @@
-# - name: Page 1
-#   link: page-1
-# - name: Blog
-#   link: blog
-#   dropdown:
-#     - name: Page 2
-#       link: page-2
+main:
+  - title: "Posts"
+    url: /posts/
+  - title: "Categories"
+    url: /categories/
+  - title: "Tags"
+    url: /tags/
+  - title: "About"
+    url: /about/
