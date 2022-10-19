@@ -4,8 +4,8 @@ title: "Learn Software Engineering"
 # title_separator: "-"
 # subtitle: # site tagline that appears below site title in masthead
 name: "Julian Nonino"
-description: >- # this means to ignore newlines until "baseurl:"
-  "Website to post Software Engineering articles."
+description: >-
+  "A place to learn about Software Engineering."
 url: "https://learn-software.com"
 # baseurl: # the subpath of your site, e.g. "/blog"
 repository: "learn-software-engineering/learn-software-engineering.github.io"
