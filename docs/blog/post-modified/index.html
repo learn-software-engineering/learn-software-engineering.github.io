@@ -30,6 +30,8 @@
 
 
 
+  <meta property="og:image" content="https://learn-software.com/assets/images/logo/jared-brashier-6WPcf5D1XdA-unsplash.jpg">
+
 
 
 
@@ -84,11 +86,15 @@
 
 
 
-    <!-- start custom head snippets -->
+    <!-- Favicon generated with https://realfavicongenerator.net/ -->
 
-<!-- insert favicons. use https://realfavicongenerator.net/ -->
-
-<!-- end custom head snippets -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="/assets/icons/site.webmanifest">
+<link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
 
   </head>
 
@@ -113,7 +119,7 @@
       <nav id="site-nav" class="greedy-nav">
         
         <a class="site-title" href="/">
-          Learn Software
+          Learn-Software.com
           
         </a>
         <ul class="visible-links"><li class="masthead__menu-item">
@@ -146,6 +152,68 @@
 
     <div class="initial-content">
       
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style=" background-image: url('/assets/images/logo/jared-brashier-6WPcf5D1XdA-unsplash.jpg');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          Post: Modified Date
+
+        
+      </h1>
+      
+        <p class="page__lead">This post has been updated and should show a modified date if used in a layout.
+</p>
+      
+      
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2022-10-15T00:00:00+00:00">October 15, 2022</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+      
+      
+    </div>
+  
+  
+    <span class="page__hero-caption">Photo by <a href="https://unsplash.com/@jaredbrashier">Jared Brashier</a> on <a href="https://unsplash.com">Unsplash</a>
+</span>
+  
+</div>
+
+
 
 
 
@@ -272,39 +340,6 @@
 
     <div class="page__inner-wrap">
       
-        <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">Post: Modified Date
-</h1>
-          
-
-  <p class="page__meta">
-    
-      
-      <span class="page__meta-date">
-        <i class="far fa-calendar-alt" aria-hidden="true"></i>
-        
-        <time datetime="2022-10-15T00:00:00+00:00">October 15, 2022</time>
-      </span>
-    
-
-    <span class="page__meta-sep"></span>
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          less than 1 minute read
-        
-      </span>
-    
-  </p>
-
-
-        </header>
-      
 
       <section class="page__content" itemprop="text">
         
@@ -394,7 +429,7 @@
       <a href="#" class="pagination--pager disabled">Previous</a>
     
     
-      <a href="/blog/post-standard/" class="pagination--pager" title="Post: Standard
+      <a href="/blog/post-standard/" class="pagination--pager" title="Post: Standard with long title to test overlay image
 ">Next</a>
     
   </nav>
@@ -428,7 +463,7 @@
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/blog/post-standard/" rel="permalink">Post: Standard
+        <a href="/blog/post-standard/" rel="permalink">Post: Standard with long title to test overlay image
 </a>
       
     </h2>
@@ -477,15 +512,13 @@
 
     
       <div class="search-content">
-        <div class="search-content__inner-wrap"><form onsubmit="return googleCustomSearchExecute();" id="cse-search-box-form-id">
-    <label class="sr-only" for="cse-search-input-box-id">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
       Enter your search term...
     </label>
-    <input type="search" id="cse-search-input-box-id" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
   </form>
-  <div id="results" class="results">
-    <gcse:searchresults-only></gcse:searchresults-only>
-  </div></div>
+  <div id="results" class="results"></div></div>
 
       </div>
     
@@ -499,16 +532,6 @@
   <ul class="social-icons">
     
 
-    
-      
-        
-          <li><a href="mailto:learn.software.eng@gmail.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> learn.software.eng@gmail.com</a></li>
-        
-      
-        
-          <li><a href="https://github.com/learn-software-engineering" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
-        
-      
     
 
     
@@ -524,30 +547,11 @@
   <script src="/assets/js/main.min.js"></script>
 
 
-<script>
-  (function () {
-    var cx = '775596d046f8749af';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
 
-  function googleCustomSearchExecute() {
-    var input = document.getElementById('cse-search-input-box-id');
-    var element = google.search.cse.element.getElement('searchresults-only0');
-    if (input.value == '') {
-      element.clearAllResults();
-    } else {
-      element.execute(input.value);
-    }
-    return false;
-  }
 
-  
-</script>
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
 
 
 
