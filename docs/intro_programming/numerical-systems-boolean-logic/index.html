@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Introduction to OOP - Learn Software Engineering</title>
+<!-- begin _includes/seo.html --><title>Numerical systems and Boolean logic - Learn Software Engineering</title>
 <meta name="description" content="“A place to learn about Software Engineering.”">
 
 
@@ -22,8 +22,8 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Learn Software Engineering">
-<meta property="og:title" content="Introduction to OOP">
-<meta property="og:url" content="https://learn-software.com/oop/intro/">
+<meta property="og:title" content="Numerical systems and Boolean logic">
+<meta property="og:url" content="https://learn-software.com/intro_programming/numerical-systems-boolean-logic/">
 
 
   <meta property="og:description" content="“A place to learn about Software Engineering.”">
@@ -43,7 +43,7 @@
 
 
 
-<link rel="canonical" href="https://learn-software.com/oop/intro/">
+<link rel="canonical" href="https://learn-software.com/intro_programming/numerical-systems-boolean-logic/">
 
 
 
@@ -165,7 +165,7 @@
     <div class="wrapper">
       <h1 id="page-title" class="page__title" itemprop="headline">
         
-          Introduction to OOP
+          Numerical systems and Boolean logic
 
         
       </h1>
@@ -194,7 +194,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          2 minute read
+          3 minute read
         
       </span>
     
@@ -347,27 +347,33 @@
     
       <li>
         
-          <span class="nav__sub-title">Object-Oriented Programming</span>
+          <span class="nav__sub-title">Introduction to Programming</span>
         
 
         
         <ul>
           
-            <li><a href="/oop/intro/" class="active">Introduction to OOP</a></li>
+            <li><a href="/intro_programming/intro/">Introduction to Programming</a></li>
           
-            <li><a href="/oop/classes-objects/">Classes and objects</a></li>
+            <li><a href="/intro_programming/install-python/">Installing Python</a></li>
           
-            <li><a href="/oop/encapsulation/">Encapsulation</a></li>
+            <li><a href="/intro_programming/numerical-systems-boolean-logic/" class="active">Numerical systems and Boolean logic</a></li>
           
-            <li><a href="/oop/inheritance/">Inheritance</a></li>
+            <li><a href="/intro_programming/vars-data-types/">Variables and Data Types</a></li>
           
-            <li><a href="/oop/polymorphism/">Polymorphism</a></li>
+            <li><a href="/intro_programming/control-flow/">Control Flow</a></li>
           
-            <li><a href="/oop/abstraction/">Abstraction</a></li>
+            <li><a href="/intro_programming/functions/">Functions</a></li>
           
-            <li><a href="/oop/associations/">Associations, aggregations, and compositions</a></li>
+            <li><a href="/intro_programming/algorithms/">Algorithms</a></li>
           
-            <li><a href="/oop/advanced-concepts/">Advanced concepts</a></li>
+            <li><a href="/intro_programming/oop/">Object-Oriented Programming</a></li>
+          
+            <li><a href="/intro_programming/error-handling-debugging/">Error Handling and Debugging</a></li>
+          
+            <li><a href="/intro_programming/testing/">Testing</a></li>
+          
+            <li><a href="/intro_programming/design-patterns/">Design Patterns</a></li>
           
         </ul>
         
@@ -383,7 +389,7 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Introduction to OOP">
+    <meta itemprop="headline" content="Numerical systems and Boolean logic">
     <meta itemprop="description" content="">
     <meta itemprop="datePublished" content="2023-08-08T20:53:33+00:00">
     
@@ -396,76 +402,122 @@
           <aside class="sidebar__right ">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#principles">Principles</a></li><li><a href="#advantages">Advantages</a></li><li><a href="#oop-vs-procedural-programming">OOP vs. Procedural Programming</a></li><li><a href="#real-world-analogy">Real-World analogy</a></li></ul>
+              <ul class="toc__menu"><li><a href="#binary-numerical-system">Binary numerical system</a></li><li><a href="#hexadecimal-numerical-system">Hexadecimal numerical system</a></li><li><a href="#boolean-logic">Boolean logic</a><ul><li><a href="#truth-tables">Truth tables</a></li></ul></li><li><a href="#conclusion">Conclusion</a></li></ul>
 
             </nav>
           </aside>
         
-        <p>Object-Oriented Programming (OOP) is a paradigm that helps organize code using real-world concepts, making it more readable, reusable, and maintainable. It’s built around the idea that everything can be represented as objects.</p>
+        <p>Programming, at its core, involves manipulating numbers and logic. In this article, we will explore two essential numerical systems (Binary and Hexadecimal) and delve into the fundamental principles of Boolean logic. These concepts are vital for anyone beginning their journey in programming.</p>
 
-<p>OOP emerged in the 1960s with the programming language Simula, but it gained prominence in the 1980s with languages like C++ and Smalltalk. At its core, OOP models the code as “objects” that bundle both state (attributes) and behaviors (methods).</p>
+<h2 id="binary-numerical-system">Binary numerical system</h2>
 
-<h3 id="principles">Principles</h3>
+<p>The Binary system is a <code class="language-plaintext highlighter-rouge">base-2</code> numerical system that uses only two symbols: <code class="language-plaintext highlighter-rouge">0</code> and <code class="language-plaintext highlighter-rouge">1</code>. It’s the fundamental language of computers and is used to represent all types of data.</p>
 
-<p>There are four key principles of OOP:</p>
+<p>In the Binary system, each digit represents a power of 2, with the rightmost digit representing <code class="language-plaintext highlighter-rouge">2^0</code>, the next representing <code class="language-plaintext highlighter-rouge">2^1</code>, and so on.</p>
 
-<ol>
-  <li><strong>Encapsulation</strong>: Packaging attributes and methods within a class, controlling access to the information.</li>
-  <li><strong>Inheritance</strong>: Allowing a class to inherit attributes and methods from another class.</li>
-  <li><strong>Polymorphism</strong>: Enabling a class to be treated like another class, using different methods interchangeably.</li>
-  <li><strong>Abstraction</strong>: Hiding complex realities while exposing only essential parts.</li>
-</ol>
+<p>Binary number <code class="language-plaintext highlighter-rouge">1011</code> can be represented in Decimal as:</p>
 
-<h3 id="advantages">Advantages</h3>
+<p><code class="language-plaintext highlighter-rouge">1 * 2^3 + 0 * 2^2 + 1 * 2^1 + 1 * 2^0 = 8 + 0 + 2 + 1 = 11</code></p>
+
+<p>Binary is used in programming to understand how data is stored and manipulated at the hardware level. It’s essential for low-level programming like creating device drivers or embedded systems.</p>
+
+<h2 id="hexadecimal-numerical-system">Hexadecimal numerical system</h2>
+
+<p>The Hexadecimal system is a <code class="language-plaintext highlighter-rouge">base-16</code> numerical system, using sixteen distinct symbols. The first ten are the same as the decimal system, and the next six are represented as <code class="language-plaintext highlighter-rouge">A</code> for ten, <code class="language-plaintext highlighter-rouge">B</code> for eleven, <code class="language-plaintext highlighter-rouge">C</code> for twelve, <code class="language-plaintext highlighter-rouge">D</code> for thirteen, <code class="language-plaintext highlighter-rouge">E</code> for fourteen, and <code class="language-plaintext highlighter-rouge">F</code> for fifteen.</p>
+
+<p>Like Binary, each digit in Hexadecimal represents a power, but this time of <code class="language-plaintext highlighter-rouge">16</code>.</p>
+
+<p>Hexadecimal number <code class="language-plaintext highlighter-rouge">2A3</code> can be represented in Decimal as:</p>
+
+<p><code class="language-plaintext highlighter-rouge">2 * 16^2 + 10 * 16^1 + 3 * 16^0 = 512 + 160 + 3 = 675</code></p>
+
+<p>Hexadecimal is often used in programming for defining colors in web development, memory addresses, or displaying binary-coded values in a more human-readable form.</p>
+
+<h2 id="boolean-logic">Boolean logic</h2>
+
+<p>Boolean logic is a branch of algebra that deals with true or false values. It’s named after George Boole and is foundational in computer science and electrical engineering.</p>
+
+<p>Boolean logic typically consists of five fundamental operators:</p>
 
 <ul>
-  <li><strong>Modularity</strong>: Breaking down complex problems into smaller, manageable parts.</li>
-  <li><strong>Reusability</strong>: Using the same code across different parts of an application or different projects.</li>
-  <li><strong>Maintainability</strong>: Making it easier to update, modify, and debug code.</li>
-  <li><strong>Scalability</strong>: Building larger and more complex applications with ease.</li>
+  <li><strong>AND</strong> (Conjunction): Returns true if both operands are true.</li>
+  <li><strong>OR</strong> (Disjunction): Returns true if at least one operand is true.</li>
+  <li><strong>NOT</strong> (Negation): Returns true if the operand is false.</li>
+  <li><strong>XOR</strong> (Exclusive OR): Returns true if exactly one of the operands is true.</li>
+  <li><strong>NOR</strong> (Logical NOR): Returns true if neither of the operands is true.</li>
+  <li><strong>NAND</strong> (Logical NAND): Returns true if at least one of the operands is false.</li>
 </ul>
 
-<h3 id="oop-vs-procedural-programming">OOP vs. Procedural Programming</h3>
+<p>Different programming languages and systems might utilize these operators in various ways or under different names, but these are the core logical operators found in Boolean algebra.</p>
 
-<p>In contrast to procedural programming, where the focus is on writing functions or procedures, OOP emphasizes creating objects containing both data and functions.</p>
+<p>Boolean logic is fundamental in programming for control structures, decision-making processes, and complex algorithms.</p>
 
-<ul>
-  <li><strong>Procedural</strong>: Functions operate on data, often leading to code repetition.</li>
-  <li><strong>OOP</strong>: Encapsulates data and functions into objects, promoting reusability and organization.</li>
-</ul>
+<h3 id="truth-tables">Truth tables</h3>
 
-<h3 id="real-world-analogy">Real-World analogy</h3>
+<p>A truth table is a mathematical table used in logic to compute and visualize the output values of logical functions, given all possible combinations of input values (true and false). Truth tables are used to describe how the output of a logic gate or expression changes based on the values of the inputs. Here there is a truth table for all the operators mentioned above.</p>
 
-<p>Think of a class as a blueprint for a house, defining the structure and features. Objects are individual houses built from that blueprint. Each house (object) can have different colors, sizes, or number of rooms (attributes), but they all follow the same basic design (class).</p>
-
-<h2 id="example">Example</h2>
-
-<p>Now, let’s dive into a simple Python example to understand classes and objects.</p>
-
-<p>This is an example of a class definition.</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Car</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">brand</span><span class="p">,</span> <span class="n">model</span><span class="p">):</span>
-        <span class="bp">self</span><span class="p">.</span><span class="n">brand</span> <span class="o">=</span> <span class="n">brand</span>
-        <span class="bp">self</span><span class="p">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">model</span>
-
-    <span class="k">def</span> <span class="nf">display_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"This car is a </span><span class="si">{</span><span class="bp">self</span><span class="p">.</span><span class="n">brand</span><span class="si">}</span><span class="s"> </span><span class="si">{</span><span class="bp">self</span><span class="p">.</span><span class="n">model</span><span class="si">}</span><span class="s">."</span><span class="p">)</span>
-</code></pre></div></div>
-
-<p>Here, <code class="language-plaintext highlighter-rouge">Car</code> is a class with attributes <code class="language-plaintext highlighter-rouge">brand</code> and <code class="language-plaintext highlighter-rouge">model</code>, and a method <code class="language-plaintext highlighter-rouge">display_info</code>.</p>
-
-<p>from that class, we can create objects as follows.</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">my_car</span> <span class="o">=</span> <span class="n">Car</span><span class="p">(</span><span class="s">"Toyota"</span><span class="p">,</span> <span class="s">"Camry"</span><span class="p">)</span>
-<span class="n">my_car</span><span class="p">.</span><span class="n">display_info</span><span class="p">()</span>  <span class="c1"># Output: This car is a Toyota Camry.
-</span></code></pre></div></div>
-
-<p>In this example, <code class="language-plaintext highlighter-rouge">my_car</code> is an object created from the <code class="language-plaintext highlighter-rouge">Car</code> class, with attributes set to “Toyota” and “Camry”.</p>
+<table>
+  <thead>
+    <tr>
+      <th>A</th>
+      <th>B</th>
+      <th>A AND B</th>
+      <th>A OR B</th>
+      <th>A XOR B</th>
+      <th>A NOR B</th>
+      <th>A NAND B</th>
+      <th>NOT A</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>T</td>
+      <td>T</td>
+      <td>T</td>
+      <td>T</td>
+      <td>F</td>
+      <td>F</td>
+      <td>F</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <td>T</td>
+      <td>F</td>
+      <td>F</td>
+      <td>T</td>
+      <td>T</td>
+      <td>F</td>
+      <td>T</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>T</td>
+      <td>F</td>
+      <td>T</td>
+      <td>T</td>
+      <td>F</td>
+      <td>T</td>
+      <td>T</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>F</td>
+      <td>F</td>
+      <td>F</td>
+      <td>F</td>
+      <td>T</td>
+      <td>T</td>
+      <td>T</td>
+    </tr>
+  </tbody>
+</table>
 
 <h2 id="conclusion">Conclusion</h2>
 
-<p>Object-Oriented Programming offers a powerful and intuitive way to structure code. By understanding the core principles and applying them, even beginners can start building robust and flexible software. This post has provided an overview, and future articles will delve into specific concepts like encapsulation, inheritance, and more.</p>
+<p>The Binary and Hexadecimal numerical systems, along with Boolean logic, are key concepts for anyone starting in programming. Understanding these foundational elements can provide deeper insights into how computers operate and how software interacts with hardware.</p>
+
+<p>By grasping these concepts, you are not only laying down a solid foundation for further studies in programming but also developing a rigorous and analytical mindset that will serve you well in all aspects of computer science and software development.</p>
 
         
       </section>
@@ -487,21 +539,22 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Introduction+to+OOP%20https%3A%2F%2Flearn-software.com%2Foop%2Fintro%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Numerical+systems+and+Boolean+logic%20https%3A%2F%2Flearn-software.com%2Fintro_programming%2Fnumerical-systems-boolean-logic%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flearn-software.com%2Foop%2Fintro%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flearn-software.com%2Fintro_programming%2Fnumerical-systems-boolean-logic%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Flearn-software.com%2Foop%2Fintro%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Flearn-software.com%2Fintro_programming%2Fnumerical-systems-boolean-logic%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="#" class="pagination--pager disabled">Previous</a>
+      <a href="/intro_programming/install-python/" class="pagination--pager" title="Installing Python
+">Previous</a>
     
     
-      <a href="/oop/classes-objects/" class="pagination--pager" title="Classes and objects
+      <a href="/intro_programming/vars-data-types/" class="pagination--pager" title="Variables and Data Types
 ">Next</a>
     
   </nav>
@@ -513,7 +566,7 @@
   
   
       <h4 class="page__comments-title">Leave a comment</h4>
-      <section class="fb-comments" data-href="https://learn-software.com/oop/intro/" data-mobile="true" data-num-posts="5000" data-width="100%" data-colorscheme="light"></section>
+      <section class="fb-comments" data-href="https://learn-software.com/intro_programming/numerical-systems-boolean-logic/" data-mobile="true" data-num-posts="5000" data-width="100%" data-colorscheme="light"></section>
     
 </div>
 
