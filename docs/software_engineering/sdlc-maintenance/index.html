@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Classes and objects - Learn Software Engineering</title>
-<meta name="description" content="“A place to learn about Software Engineering.”">
+<!-- begin _includes/seo.html --><title>SDLC: The Maintenance phase - Learn Software Engineering</title>
+<meta name="description" content="Evolving and enhancing: keeping software relevant and robust">
 
 
   <meta name="author" content="Julian Nonino">
@@ -22,11 +22,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Learn Software Engineering">
-<meta property="og:title" content="Classes and objects">
-<meta property="og:url" content="https://learn-software.com/oop/classes-objects/">
+<meta property="og:title" content="SDLC: The Maintenance phase">
+<meta property="og:url" content="https://learn-software.com/software_engineering/sdlc-maintenance/">
 
 
-  <meta property="og:description" content="“A place to learn about Software Engineering.”">
+  <meta property="og:description" content="Evolving and enhancing: keeping software relevant and robust">
 
 
 
@@ -43,7 +43,7 @@
 
 
 
-<link rel="canonical" href="https://learn-software.com/oop/classes-objects/">
+<link rel="canonical" href="https://learn-software.com/software_engineering/sdlc-maintenance/">
 
 
 
@@ -176,12 +176,12 @@
     <div class="wrapper">
       <h1 id="page-title" class="page__title" itemprop="headline">
         
-          Classes and objects
+          SDLC: The Maintenance phase
 
         
       </h1>
       
-        <p class="page__lead">
+        <p class="page__lead">Evolving and enhancing: keeping software relevant and robust
 </p>
       
       
@@ -205,7 +205,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          2 minute read
+          3 minute read
         
       </span>
     
@@ -362,27 +362,29 @@
     
       <li>
         
-          <span class="nav__sub-title">Object-Oriented Programming</span>
+          <span class="nav__sub-title">Software Engineering</span>
         
 
         
         <ul>
           
-            <li><a href="/oop/intro/">Introduction to OOP</a></li>
+            <li><a href="/software_engineering/intro/">Introduction to Software Engineering</a></li>
           
-            <li><a href="/oop/classes-objects/" class="active">Classes and objects</a></li>
+            <li><a href="/software_engineering/sdlc/">Software Development Life Cycle (SDLC)</a></li>
           
-            <li><a href="/oop/encapsulation/">Encapsulation</a></li>
+            <li><a href="/software_engineering/sdlc-planning/">SDLC: The Planning phase</a></li>
           
-            <li><a href="/oop/inheritance/">Inheritance</a></li>
+            <li><a href="/software_engineering/sdlc-system-design/">SDLC: The System Design phase</a></li>
           
-            <li><a href="/oop/polymorphism/">Polymorphism</a></li>
+            <li><a href="/software_engineering/sdlc-implementation/">SDLC: The Implementation phase</a></li>
           
-            <li><a href="/oop/abstraction/">Abstraction</a></li>
+            <li><a href="/software_engineering/sdlc-testing/">SDLC: The Testing phase</a></li>
           
-            <li><a href="/oop/associations/">Associations, aggregations, and compositions</a></li>
+            <li><a href="/software_engineering/sdlc-deployment/">SDLC: The Deployment phase</a></li>
           
-            <li><a href="/oop/advanced-concepts/">Advanced concepts</a></li>
+            <li><a href="/software_engineering/sdlc-maintenance/" class="active">SDLC: The Maintenance phase</a></li>
+          
+            <li><a href="/software_engineering/requirements-engineering/">Requirements Engineering</a></li>
           
         </ul>
         
@@ -398,8 +400,8 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Classes and objects">
-    <meta itemprop="description" content="">
+    <meta itemprop="headline" content="SDLC: The Maintenance phase">
+    <meta itemprop="description" content="Evolving and enhancing: keeping software relevant and robust">
     <meta itemprop="datePublished" content="2023-08-18T10:57:04+00:00">
     
 
@@ -411,104 +413,97 @@
           <aside class="sidebar__right ">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#definitions">Definitions</a><ul><li><a href="#classes">Classes</a></li><li><a href="#objects">Objects</a></li></ul></li><li><a href="#creating-and-instantiating-classes">Creating and instantiating classes</a><ul><li><a href="#instantiating-a-class">Instantiating a class</a></li></ul></li><li><a href="#constructor">Constructor</a></li><li><a href="#destructor">Destructor</a></li><li><a href="#examples">Examples</a><ul><li><a href="#creating-and-using-a-class">Creating and using a class</a></li><li><a href="#deleting-an-object">Deleting an object</a></li></ul></li><li><a href="#conclusion">Conclusion</a></li></ul>
+              <ul class="toc__menu"><li><a href="#types-of-software-maintenance">Types of software maintenance</a></li><li><a href="#the-process-of-maintenance">The Process of maintenance</a></li><li><a href="#challenges">Challenges</a></li><li><a href="#the-economic-aspects">The economic aspects</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#references">References</a></li></ul>
 
             </nav>
           </aside>
         
-        <p>Building on our previous introduction to Object-Oriented Programming (OOP), this post will dive deeper into the core concepts of classes and objects. We’ll explore their definitions, how to create and use them, and discuss constructors and destructors, with examples in Python.</p>
+        <p>Once a software application is deployed and begins its life in the hands of users, its journey is far from over. The maintenance stage, often overlooked by novices, plays a pivotal role in the Software Development Life Cycle (SDLC). This phase ensures that software remains robust, relevant, and valuable throughout its lifecycle<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>.</p>
 
-<h2 id="definitions">Definitions</h2>
+<p>Software maintenance encompasses all activities post-deployment that are not categorized as software evolution<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup>. It’s about refining, enhancing, and optimizing software, as well as fixing errors that surface over time.</p>
 
-<h3 id="classes">Classes</h3>
+<p>While creating software is challenging, maintaining it is often even more demanding. With changing user needs, technology advancements, and the inevitable emergence of bugs, ongoing maintenance is essential for software’s continued relevance and efficiency<sup id="fnref:1:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>.</p>
 
-<p>A class is a blueprint that defines the structure and behavior of an object. It encapsulates data (attributes) and functions (methods) that operate on the data.</p>
+<hr />
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Dog</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">bark</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">print</span><span class="p">(</span><span class="s">"Woof!"</span><span class="p">)</span>
-</code></pre></div></div>
+<h2 id="types-of-software-maintenance">Types of software maintenance</h2>
 
-<p>Here, <code class="language-plaintext highlighter-rouge">Dog</code> is a class with a method <code class="language-plaintext highlighter-rouge">bark</code>.</p>
+<ul>
+  <li><strong>Corrective maintenance</strong>: This involves identifying and fixing bugs or defects in the software. It’s a reactive approach, often prompted by user feedback or system monitoring<sup id="fnref:1:2" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>.</li>
+  <li><strong>Adaptive maintenance</strong>: As external factors like OS updates, hardware changes, or new regulations come into play, software needs to adapt. This type of maintenance ensures the software remains compatible with its changing environment<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup>.</li>
+  <li><strong>Perfective maintenance</strong>: Driven by the need to enhance software functionality or performance, this is about adding new features or improving existing ones based on user feedback and evolving market needs<sup id="fnref:1:3" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>.</li>
+  <li><strong>Preventive maintenance</strong>: Proactively looking into the future, this type of maintenance is focused on foreseeing and preventing future issues, often by restructuring or optimizing the code<sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">4</a></sup>.</li>
+</ul>
 
-<h3 id="objects">Objects</h3>
+<hr />
 
-<p>Objects are individual instances created from a class. They contain the data defined in the class and can execute the class’s methods.</p>
+<h2 id="the-process-of-maintenance">The Process of maintenance</h2>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">my_dog</span> <span class="o">=</span> <span class="n">Dog</span><span class="p">()</span>
-<span class="n">my_dog</span><span class="p">.</span><span class="n">bark</span><span class="p">()</span>  <span class="c1"># Output: Woof!
-</span></code></pre></div></div>
+<ol>
+  <li><strong>Request initiation</strong>: it starts with recognizing the need for maintenance. This can come from user feedback, system alerts, or regular system checks<sup id="fnref:1:4" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>.</li>
+  <li><strong>Impact analysis</strong>: before making any changes, it’s essential to assess the potential impact of the modification on the entire system<sup id="fnref:5" role="doc-noteref"><a href="#fn:5" class="footnote" rel="footnote">5</a></sup>.</li>
+  <li><strong>Design and implementation</strong>: with a clear understanding of the task at hand, developers design the solution and implement the necessary changes<sup id="fnref:1:5" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>.</li>
+  <li><strong>System testing</strong>: post-implementation, rigorous testing is essential to ensure that the changes work as intended and haven’t inadvertently introduced new issues<sup id="fnref:2:1" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup>.</li>
+  <li><strong>Release</strong>: once satisfied, the updated software is released to users, either as patches, updates, or new versions<sup id="fnref:1:6" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>.</li>
+</ol>
 
-<p><code class="language-plaintext highlighter-rouge">my_dog</code> is an object of the class <code class="language-plaintext highlighter-rouge">Dog</code>, and it can use the <code class="language-plaintext highlighter-rouge">bark</code> method.</p>
+<hr />
 
-<h2 id="creating-and-instantiating-classes">Creating and instantiating classes</h2>
+<h2 id="challenges">Challenges</h2>
 
-<p>In Python, you can define a class using the <code class="language-plaintext highlighter-rouge">class</code> keyword followed by the class name and a colon.</p>
+<ul>
+  <li><strong>Understanding legacy code</strong>: as software evolves, understanding older parts of the codebase, especially if original developers have moved on, can be challenging<sup id="fnref:6" role="doc-noteref"><a href="#fn:6" class="footnote" rel="footnote">6</a></sup>.</li>
+  <li><strong>Maintaining documentation</strong>: over time, ensuring that documentation stays up-to-date and accurately reflects the software’s current state is a continuous challenge<sup id="fnref:7" role="doc-noteref"><a href="#fn:7" class="footnote" rel="footnote">7</a></sup>.</li>
+  <li><strong>Balancing new development with maintenance</strong>: allocating resources between developing new features and maintaining existing ones is a tightrope walk many teams grapple with<sup id="fnref:8" role="doc-noteref"><a href="#fn:8" class="footnote" rel="footnote">8</a></sup>.</li>
+</ul>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
-    <span class="k">pass</span>
-</code></pre></div></div>
+<hr />
 
-<p>This creates an empty class named <code class="language-plaintext highlighter-rouge">Person</code>.</p>
+<h2 id="the-economic-aspects">The economic aspects</h2>
 
-<h3 id="instantiating-a-class">Instantiating a class</h3>
+<p>It’s often quoted in software engineering literature that maintenance costs can account for over 60% of all SDLC costs<sup id="fnref:11" role="doc-noteref"><a href="#fn:11" class="footnote" rel="footnote">9</a></sup>. Hence, budgeting, resource allocation, and cost optimization become integral parts of the maintenance stage.</p>
 
-<p>Instantiating a class means creating an object from that class. You can do this by calling the class as if it were a function.</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">person</span> <span class="o">=</span> <span class="n">Person</span><span class="p">()</span>
-</code></pre></div></div>
-
-<p>Now, <code class="language-plaintext highlighter-rouge">person</code> is an instance of the <code class="language-plaintext highlighter-rouge">Person</code> class.</p>
-
-<h2 id="constructor">Constructor</h2>
-
-<p>A constructor is a special method that gets called when you create an object. In Python, it’s defined using the <code class="language-plaintext highlighter-rouge">__init__</code> method.</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Cat</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
-        <span class="bp">self</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
-        <span class="bp">self</span><span class="p">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">color</span>
-</code></pre></div></div>
-
-<p>This constructor initializes a <code class="language-plaintext highlighter-rouge">Cat</code> object with a name and color.</p>
-
-<h2 id="destructor">Destructor</h2>
-
-<p>A destructor is a method that gets called when an object is destroyed. In Python, it’s defined using the <code class="language-plaintext highlighter-rouge">__del__</code> method.</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Cat</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">__del__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="bp">self</span><span class="p">.</span><span class="n">name</span><span class="si">}</span><span class="s"> has been deleted."</span><span class="p">)</span>
-</code></pre></div></div>
-
-<p>This destructor prints a message when a <code class="language-plaintext highlighter-rouge">Cat</code> object is deleted.</p>
-
-<h2 id="examples">Examples</h2>
-
-<h3 id="creating-and-using-a-class">Creating and using a class</h3>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Bike</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">brand</span><span class="p">,</span> <span class="n">model</span><span class="p">):</span>
-        <span class="bp">self</span><span class="p">.</span><span class="n">brand</span> <span class="o">=</span> <span class="n">brand</span>
-        <span class="bp">self</span><span class="p">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">model</span>
-
-    <span class="k">def</span> <span class="nf">display_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"This bike is a </span><span class="si">{</span><span class="bp">self</span><span class="p">.</span><span class="n">brand</span><span class="si">}</span><span class="s"> </span><span class="si">{</span><span class="bp">self</span><span class="p">.</span><span class="n">model</span><span class="si">}</span><span class="s">."</span><span class="p">)</span>
-
-<span class="n">my_bike</span> <span class="o">=</span> <span class="n">Bike</span><span class="p">(</span><span class="s">"Yamaha"</span><span class="p">,</span> <span class="s">"MT-07"</span><span class="p">)</span>
-<span class="n">my_bike</span><span class="p">.</span><span class="n">display_info</span><span class="p">()</span>  <span class="c1"># Output: This bike is a Yamaha MT-07.
-</span></code></pre></div></div>
-
-<h3 id="deleting-an-object">Deleting an object</h3>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">del</span> <span class="n">my_bike</span>  <span class="c1"># This will call the destructor if defined.
-</span></code></pre></div></div>
+<hr />
 
 <h2 id="conclusion">Conclusion</h2>
 
-<p>Classes and objects are foundational concepts in OOP, allowing you to structure code in a way that mirrors real-world entities. Constructors and destructors further add to the lifecycle management of objects. With this understanding, you’re now prepared to delve into more advanced OOP concepts.</p>
+<p>Maintenance is not merely an afterthought; it’s the pulse that keeps software alive and relevant in an ever-changing digital landscape. By understanding and embracing the nuances of this SDLC stage, software engineers can ensure the longevity and success of their creations<sup id="fnref:1:7" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>.</p>
 
-<p>In our next article, we will explore encapsulation, one of the key principles of OOP, and see how it contributes to code organization and security.</p>
+<hr />
+
+<h2 id="references">References</h2>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p>Sommerville, I., 2010. Software Engineering. 9th ed. Pearson. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:1:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a> <a href="#fnref:1:2" class="reversefootnote" role="doc-backlink">&#8617;<sup>3</sup></a> <a href="#fnref:1:3" class="reversefootnote" role="doc-backlink">&#8617;<sup>4</sup></a> <a href="#fnref:1:4" class="reversefootnote" role="doc-backlink">&#8617;<sup>5</sup></a> <a href="#fnref:1:5" class="reversefootnote" role="doc-backlink">&#8617;<sup>6</sup></a> <a href="#fnref:1:6" class="reversefootnote" role="doc-backlink">&#8617;<sup>7</sup></a> <a href="#fnref:1:7" class="reversefootnote" role="doc-backlink">&#8617;<sup>8</sup></a></p>
+    </li>
+    <li id="fn:2" role="doc-endnote">
+      <p>Pressman, R.S., 2010. Software Engineering: A Practitioner’s Approach. 7th ed. McGraw-Hill. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:2:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
+    </li>
+    <li id="fn:3" role="doc-endnote">
+      <p>Tanenbaum, A.S., 2014. Modern Operating Systems. 4th ed. Prentice Hall. <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:4" role="doc-endnote">
+      <p>Parnas, D.L., 1994. Software Aging. <em>Proceedings of the 16th international conference on Software engineering</em>. IEEE. <a href="#fnref:4" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:5" role="doc-endnote">
+      <p>Lehman, M.M., 1980. Programs, life cycles, and laws of software evolution. <em>Proceedings of the IEEE</em>, 68(9), pp.1060-1076. <a href="#fnref:5" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:6" role="doc-endnote">
+      <p>Bowman, I.T., Holt, R.C., and Brewster, N.V., 1999. Linux as a case study: Its extracted software architecture. <em>Proceedings of the 21st international conference on Software engineering</em>. ACM. <a href="#fnref:6" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:7" role="doc-endnote">
+      <p>Lethbridge, T.C., Singer, J., and Forward, A., 2003. How software engineers use documentation: The state of the practice. <em>IEEE Software</em>, 20(6), pp.35-39. <a href="#fnref:7" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:8" role="doc-endnote">
+      <p>Boehm, B.W., and Basili, V.R., 2001. Software defect reduction top 10 list. <em>Computer</em>, 34(1), pp.135-137. <a href="#fnref:8" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:11" role="doc-endnote">
+      <p>Erlikh, L., 2000. Leveraging legacy system dollars for e-business. <em>IT professional</em>, 2(3), pp.17-23. <a href="#fnref:11" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
 
         
       </section>
@@ -530,22 +525,22 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Classes+and+objects%20https%3A%2F%2Flearn-software.com%2Foop%2Fclasses-objects%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=SDLC%3A+The+Maintenance+phase%20https%3A%2F%2Flearn-software.com%2Fsoftware_engineering%2Fsdlc-maintenance%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flearn-software.com%2Foop%2Fclasses-objects%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flearn-software.com%2Fsoftware_engineering%2Fsdlc-maintenance%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Flearn-software.com%2Foop%2Fclasses-objects%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Flearn-software.com%2Fsoftware_engineering%2Fsdlc-maintenance%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/oop/intro/" class="pagination--pager" title="Introduction to OOP
+      <a href="/software_engineering/sdlc-deployment/" class="pagination--pager" title="SDLC: The Deployment phase
 ">Previous</a>
     
     
-      <a href="/oop/encapsulation/" class="pagination--pager" title="Encapsulation
+      <a href="/software_engineering/requirements-engineering/" class="pagination--pager" title="Requirements Engineering
 ">Next</a>
     
   </nav>
@@ -557,7 +552,7 @@
   
   
       <h4 class="page__comments-title">Leave a comment</h4>
-      <section class="fb-comments" data-href="https://learn-software.com/oop/classes-objects/" data-mobile="true" data-num-posts="5000" data-width="100%" data-colorscheme="dark"></section>
+      <section class="fb-comments" data-href="https://learn-software.com/software_engineering/sdlc-maintenance/" data-mobile="true" data-num-posts="5000" data-width="100%" data-colorscheme="dark"></section>
     
 </div>
 

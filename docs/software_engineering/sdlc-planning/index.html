@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Classes and objects - Learn Software Engineering</title>
-<meta name="description" content="“A place to learn about Software Engineering.”">
+<!-- begin _includes/seo.html --><title>SDLC: The Planning phase - Learn Software Engineering</title>
+<meta name="description" content="Blueprinting the future: laying down a project’s foundation">
 
 
   <meta name="author" content="Julian Nonino">
@@ -22,11 +22,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Learn Software Engineering">
-<meta property="og:title" content="Classes and objects">
-<meta property="og:url" content="https://learn-software.com/oop/classes-objects/">
+<meta property="og:title" content="SDLC: The Planning phase">
+<meta property="og:url" content="https://learn-software.com/software_engineering/sdlc-planning/">
 
 
-  <meta property="og:description" content="“A place to learn about Software Engineering.”">
+  <meta property="og:description" content="Blueprinting the future: laying down a project’s foundation">
 
 
 
@@ -43,7 +43,7 @@
 
 
 
-<link rel="canonical" href="https://learn-software.com/oop/classes-objects/">
+<link rel="canonical" href="https://learn-software.com/software_engineering/sdlc-planning/">
 
 
 
@@ -176,12 +176,12 @@
     <div class="wrapper">
       <h1 id="page-title" class="page__title" itemprop="headline">
         
-          Classes and objects
+          SDLC: The Planning phase
 
         
       </h1>
       
-        <p class="page__lead">
+        <p class="page__lead">Blueprinting the future: laying down a project’s foundation
 </p>
       
       
@@ -205,7 +205,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          2 minute read
+          4 minute read
         
       </span>
     
@@ -362,27 +362,29 @@
     
       <li>
         
-          <span class="nav__sub-title">Object-Oriented Programming</span>
+          <span class="nav__sub-title">Software Engineering</span>
         
 
         
         <ul>
           
-            <li><a href="/oop/intro/">Introduction to OOP</a></li>
+            <li><a href="/software_engineering/intro/">Introduction to Software Engineering</a></li>
           
-            <li><a href="/oop/classes-objects/" class="active">Classes and objects</a></li>
+            <li><a href="/software_engineering/sdlc/">Software Development Life Cycle (SDLC)</a></li>
           
-            <li><a href="/oop/encapsulation/">Encapsulation</a></li>
+            <li><a href="/software_engineering/sdlc-planning/" class="active">SDLC: The Planning phase</a></li>
           
-            <li><a href="/oop/inheritance/">Inheritance</a></li>
+            <li><a href="/software_engineering/sdlc-system-design/">SDLC: The System Design phase</a></li>
           
-            <li><a href="/oop/polymorphism/">Polymorphism</a></li>
+            <li><a href="/software_engineering/sdlc-implementation/">SDLC: The Implementation phase</a></li>
           
-            <li><a href="/oop/abstraction/">Abstraction</a></li>
+            <li><a href="/software_engineering/sdlc-testing/">SDLC: The Testing phase</a></li>
           
-            <li><a href="/oop/associations/">Associations, aggregations, and compositions</a></li>
+            <li><a href="/software_engineering/sdlc-deployment/">SDLC: The Deployment phase</a></li>
           
-            <li><a href="/oop/advanced-concepts/">Advanced concepts</a></li>
+            <li><a href="/software_engineering/sdlc-maintenance/">SDLC: The Maintenance phase</a></li>
+          
+            <li><a href="/software_engineering/requirements-engineering/">Requirements Engineering</a></li>
           
         </ul>
         
@@ -398,8 +400,8 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Classes and objects">
-    <meta itemprop="description" content="">
+    <meta itemprop="headline" content="SDLC: The Planning phase">
+    <meta itemprop="description" content="Blueprinting the future: laying down a project’s foundation">
     <meta itemprop="datePublished" content="2023-08-18T10:57:04+00:00">
     
 
@@ -411,104 +413,121 @@
           <aside class="sidebar__right ">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#definitions">Definitions</a><ul><li><a href="#classes">Classes</a></li><li><a href="#objects">Objects</a></li></ul></li><li><a href="#creating-and-instantiating-classes">Creating and instantiating classes</a><ul><li><a href="#instantiating-a-class">Instantiating a class</a></li></ul></li><li><a href="#constructor">Constructor</a></li><li><a href="#destructor">Destructor</a></li><li><a href="#examples">Examples</a><ul><li><a href="#creating-and-using-a-class">Creating and using a class</a></li><li><a href="#deleting-an-object">Deleting an object</a></li></ul></li><li><a href="#conclusion">Conclusion</a></li></ul>
+              <ul class="toc__menu"><li><a href="#key-components">Key components</a><ul><li><a href="#requirement-gathering-and-analysis">Requirement gathering and analysis</a></li><li><a href="#feasibility-study">Feasibility study</a></li><li><a href="#project-scheduling">Project scheduling</a></li><li><a href="#resource-allocation">Resource allocation</a></li><li><a href="#risk-assessment">Risk assessment</a></li></ul></li><li><a href="#why-planning-matters">Why planning matters</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#references">References</a></li></ul>
 
             </nav>
           </aside>
         
-        <p>Building on our previous introduction to Object-Oriented Programming (OOP), this post will dive deeper into the core concepts of classes and objects. We’ll explore their definitions, how to create and use them, and discuss constructors and destructors, with examples in Python.</p>
+        <p>Stepping into the vast world of software development, one quickly realizes that building successful software isn’t just about writing code. It requires foresight, strategy, and, above all, meticulous planning. The planning phase of the SDLC serves as the foundation upon which all subsequent stages are built. Here, we’ll unpack this critical phase, understanding its nuances and appreciating its central role in software engineering.</p>
 
-<h2 id="definitions">Definitions</h2>
+<p>At its core, planning in software development is about establishing a clear vision for the software project, determining what you want to achieve, and figuring out how best to achieve it<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>. It’s akin to mapping out a journey before embarking on it, ensuring you have all the necessary tools and knowledge to navigate through the challenges ahead.</p>
 
-<h3 id="classes">Classes</h3>
+<hr />
 
-<p>A class is a blueprint that defines the structure and behavior of an object. It encapsulates data (attributes) and functions (methods) that operate on the data.</p>
+<h2 id="key-components">Key components</h2>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Dog</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">bark</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">print</span><span class="p">(</span><span class="s">"Woof!"</span><span class="p">)</span>
-</code></pre></div></div>
+<h3 id="requirement-gathering-and-analysis">Requirement gathering and analysis</h3>
 
-<p>Here, <code class="language-plaintext highlighter-rouge">Dog</code> is a class with a method <code class="language-plaintext highlighter-rouge">bark</code>.</p>
+<p>When we talk about requirements, we’re essentially discussing the needs, desires, and constraints of the software project<sup id="fnref:1:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>. Requirement gathering is the act of deeply engaging with stakeholders, from potential users to business experts, to compile a comprehensive list of what the software must accomplish. This dialogue can take various forms: interviews, surveys, user workshops, or even observation.</p>
 
-<h3 id="objects">Objects</h3>
+<p>The subsequent step, requirement analysis, involves sifting through this amassed data to create a structured and prioritized list. The primary aim here is to delineate functional requirements (what the software should do) from non-functional requirements (how the software should behave, e.g., performance, security, usability standards)<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup>. At the heart of this component is the creation of a clear, concise, and comprehensive requirements document. This document becomes the blueprint for the entire project, guiding subsequent phases of the SDLC.</p>
 
-<p>Objects are individual instances created from a class. They contain the data defined in the class and can execute the class’s methods.</p>
+<p>This topic will be studied in detail later. Please check the article <a href="/software_engineering/requirements-engineering/">Requirements Engineering</a> on this blog.</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">my_dog</span> <span class="o">=</span> <span class="n">Dog</span><span class="p">()</span>
-<span class="n">my_dog</span><span class="p">.</span><span class="n">bark</span><span class="p">()</span>  <span class="c1"># Output: Woof!
-</span></code></pre></div></div>
+<h3 id="feasibility-study">Feasibility study</h3>
 
-<p><code class="language-plaintext highlighter-rouge">my_dog</code> is an object of the class <code class="language-plaintext highlighter-rouge">Dog</code>, and it can use the <code class="language-plaintext highlighter-rouge">bark</code> method.</p>
+<p>Imagine embarking on a grand venture without checking if it’s achievable. A feasibility study plays this crucial role in the planning phase<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup>. It’s a rigorous analysis to ascertain if the project is viable in various aspects:</p>
 
-<h2 id="creating-and-instantiating-classes">Creating and instantiating classes</h2>
+<ul>
+  <li><strong>Technical feasibility</strong>: can we build it with our current tech stack and expertise?</li>
+  <li><strong>Economic feasibility</strong>: does it make financial sense to undertake this project?</li>
+  <li><strong>Operational feasibility</strong>: once developed, will the software integrate seamlessly into its intended environment?</li>
+  <li><strong>Legal feasibility</strong>: are there any regulatory or compliance factors we need to consider?</li>
+</ul>
 
-<p>In Python, you can define a class using the <code class="language-plaintext highlighter-rouge">class</code> keyword followed by the class name and a colon.</p>
+<p>This systematic study not only ensures that the project is grounded in reality but also preemptively identifies potential pitfalls, enabling the team to either address them or reconsider the project’s scope.</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
-    <span class="k">pass</span>
-</code></pre></div></div>
+<h3 id="project-scheduling">Project scheduling</h3>
 
-<p>This creates an empty class named <code class="language-plaintext highlighter-rouge">Person</code>.</p>
+<p>Time, as they say, waits for no one. Especially in software development, where delays can mean cost overruns or missed market opportunities<sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">4</a></sup>. Project scheduling is the act of plotting out the journey ahead. It’s not just about setting a launch date; it’s about understanding and allocating time for each intricate step of the SDLC.</p>
 
-<h3 id="instantiating-a-class">Instantiating a class</h3>
+<p>Key tools, like Gantt charts, offer visual representations of project timelines, mapping out tasks against time. Critical Path Method (CPM) can help identify the most important sequence of tasks, ensuring focus is placed where it’s most crucial<sup id="fnref:5" role="doc-noteref"><a href="#fn:5" class="footnote" rel="footnote">5</a></sup>. This meticulous breakdown of timelines helps teams remain synchronized and stakeholders aligned, offering a clear picture of expected progress.</p>
 
-<p>Instantiating a class means creating an object from that class. You can do this by calling the class as if it were a function.</p>
+<h3 id="resource-allocation">Resource allocation</h3>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">person</span> <span class="o">=</span> <span class="n">Person</span><span class="p">()</span>
-</code></pre></div></div>
+<p>Every craftsperson needs their tools, and in software development, these tools range from the tangible to the intangible<sup id="fnref:6" role="doc-noteref"><a href="#fn:6" class="footnote" rel="footnote">6</a></sup>. Resource allocation is about identifying and procuring these necessary tools. This component deals with:</p>
 
-<p>Now, <code class="language-plaintext highlighter-rouge">person</code> is an instance of the <code class="language-plaintext highlighter-rouge">Person</code> class.</p>
+<ul>
+  <li><strong>Human resources</strong>: which skills do we need, and do we have them in-house or need to hire?</li>
+  <li><strong>Technological resources</strong>: what software, hardware, and platforms are essential for development?</li>
+  <li><strong>Financial resources</strong>: budgeting for the project, ensuring that funds are available and wisely distributed.</li>
+</ul>
 
-<h2 id="constructor">Constructor</h2>
+<p>Effective resource allocation ensures that the development team isn’t hamstrung by lack of tools or personnel, promoting a smoother flow through subsequent SDLC stages.</p>
 
-<p>A constructor is a special method that gets called when you create an object. In Python, it’s defined using the <code class="language-plaintext highlighter-rouge">__init__</code> method.</p>
+<h3 id="risk-assessment">Risk assessment</h3>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Cat</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
-        <span class="bp">self</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
-        <span class="bp">self</span><span class="p">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">color</span>
-</code></pre></div></div>
+<p>In any venture, risks lurk. But in software development, with its myriad components and dependencies, risks are especially abundant<sup id="fnref:7" role="doc-noteref"><a href="#fn:7" class="footnote" rel="footnote">7</a></sup>. Risk assessment is the act of identifying, analyzing, and planning for these potential pitfalls.</p>
 
-<p>This constructor initializes a <code class="language-plaintext highlighter-rouge">Cat</code> object with a name and color.</p>
+<p>By identifying risks early, from shifting user requirements to technological challenges, teams can develop strategies to either mitigate or avoid them. Tools like SWOT analysis (evaluating Strengths, Weaknesses, Opportunities, Threats) can offer structured frameworks for this process. As a core part of the planning phase, risk assessment ensures that the team isn’t blindsided, but rather, is always a step ahead of potential challenges.</p>
 
-<h2 id="destructor">Destructor</h2>
+<hr />
 
-<p>A destructor is a method that gets called when an object is destroyed. In Python, it’s defined using the <code class="language-plaintext highlighter-rouge">__del__</code> method.</p>
+<h2 id="why-planning-matters">Why planning matters</h2>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Cat</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">__del__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="bp">self</span><span class="p">.</span><span class="n">name</span><span class="si">}</span><span class="s"> has been deleted."</span><span class="p">)</span>
-</code></pre></div></div>
+<p><strong>Vision alignment</strong></p>
 
-<p>This destructor prints a message when a <code class="language-plaintext highlighter-rouge">Cat</code> object is deleted.</p>
+<p>The planning phase ensures that all stakeholders share a unified vision of the project’s objectives and outcomes<sup id="fnref:8" role="doc-noteref"><a href="#fn:8" class="footnote" rel="footnote">8</a></sup>.</p>
 
-<h2 id="examples">Examples</h2>
+<p><strong>Cost and time efficiency</strong></p>
 
-<h3 id="creating-and-using-a-class">Creating and using a class</h3>
+<p>A well-laid plan can help prevent costly overruns and delays, ensuring the project remains within budget and on schedule.</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Bike</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">brand</span><span class="p">,</span> <span class="n">model</span><span class="p">):</span>
-        <span class="bp">self</span><span class="p">.</span><span class="n">brand</span> <span class="o">=</span> <span class="n">brand</span>
-        <span class="bp">self</span><span class="p">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">model</span>
+<p><strong>Foundation for subsequent phases</strong></p>
 
-    <span class="k">def</span> <span class="nf">display_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"This bike is a </span><span class="si">{</span><span class="bp">self</span><span class="p">.</span><span class="n">brand</span><span class="si">}</span><span class="s"> </span><span class="si">{</span><span class="bp">self</span><span class="p">.</span><span class="n">model</span><span class="si">}</span><span class="s">."</span><span class="p">)</span>
+<p>Think of planning as laying the groundwork. A solid plan paves the way for smoother design, development, testing, and deployment phases<sup id="fnref:9" role="doc-noteref"><a href="#fn:9" class="footnote" rel="footnote">9</a></sup>.</p>
 
-<span class="n">my_bike</span> <span class="o">=</span> <span class="n">Bike</span><span class="p">(</span><span class="s">"Yamaha"</span><span class="p">,</span> <span class="s">"MT-07"</span><span class="p">)</span>
-<span class="n">my_bike</span><span class="p">.</span><span class="n">display_info</span><span class="p">()</span>  <span class="c1"># Output: This bike is a Yamaha MT-07.
-</span></code></pre></div></div>
-
-<h3 id="deleting-an-object">Deleting an object</h3>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">del</span> <span class="n">my_bike</span>  <span class="c1"># This will call the destructor if defined.
-</span></code></pre></div></div>
+<hr />
 
 <h2 id="conclusion">Conclusion</h2>
 
-<p>Classes and objects are foundational concepts in OOP, allowing you to structure code in a way that mirrors real-world entities. Constructors and destructors further add to the lifecycle management of objects. With this understanding, you’re now prepared to delve into more advanced OOP concepts.</p>
+<p>Embarking on a software project without comprehensive planning is like setting sail on turbulent seas without a compass. As you journey deeper into the realm of software development, always remember the sage words of Benjamin Franklin: “By failing to prepare, you are preparing to fail.”</p>
 
-<p>In our next article, we will explore encapsulation, one of the key principles of OOP, and see how it contributes to code organization and security.</p>
+<hr />
+
+<h2 id="references">References</h2>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p>Sommerville, I., 2010. Software Engineering. 9th ed. Pearson. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:1:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
+    </li>
+    <li id="fn:2" role="doc-endnote">
+      <p>Pressman, R.S., 2010. Software Engineering: A Practitioner’s Approach. 7th ed. McGraw-Hill. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:3" role="doc-endnote">
+      <p>Boehm, B.W., 1988. A Spiral Model of Software Development and Enhancement. Computer, 21(5). <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:4" role="doc-endnote">
+      <p>Kerzner, H., 2009. Project Management: A Systems Approach to Planning, Scheduling, and Controlling. 10th ed. Wiley. <a href="#fnref:4" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:5" role="doc-endnote">
+      <p>Lewis, J.P., 2007. Fundamentals of Project Management. 3rd ed. AMACOM. <a href="#fnref:5" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:6" role="doc-endnote">
+      <p>Pfleeger, S.L., 2009. Software Engineering: Theory and Practice. 4th ed. Pearson. <a href="#fnref:6" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:7" role="doc-endnote">
+      <p>Charette, R.N., 1989. Software Engineering Risk Analysis and Management. McGraw-Hill. <a href="#fnref:7" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:8" role="doc-endnote">
+      <p>Brooks, F.P., 1995. The Mythical Man-Month: Essays on Software Engineering. Addison-Wesley. <a href="#fnref:8" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:9" role="doc-endnote">
+      <p>Jalote, P., 2005. An Integrated Approach to Software Engineering. 3rd ed. Springer. <a href="#fnref:9" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
 
         
       </section>
@@ -530,22 +549,22 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Classes+and+objects%20https%3A%2F%2Flearn-software.com%2Foop%2Fclasses-objects%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=SDLC%3A+The+Planning+phase%20https%3A%2F%2Flearn-software.com%2Fsoftware_engineering%2Fsdlc-planning%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flearn-software.com%2Foop%2Fclasses-objects%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flearn-software.com%2Fsoftware_engineering%2Fsdlc-planning%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Flearn-software.com%2Foop%2Fclasses-objects%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Flearn-software.com%2Fsoftware_engineering%2Fsdlc-planning%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/oop/intro/" class="pagination--pager" title="Introduction to OOP
+      <a href="/software_engineering/sdlc/" class="pagination--pager" title="Software Development Life Cycle (SDLC)
 ">Previous</a>
     
     
-      <a href="/oop/encapsulation/" class="pagination--pager" title="Encapsulation
+      <a href="/software_engineering/sdlc-system-design/" class="pagination--pager" title="SDLC: The System Design phase
 ">Next</a>
     
   </nav>
@@ -557,7 +576,7 @@
   
   
       <h4 class="page__comments-title">Leave a comment</h4>
-      <section class="fb-comments" data-href="https://learn-software.com/oop/classes-objects/" data-mobile="true" data-num-posts="5000" data-width="100%" data-colorscheme="dark"></section>
+      <section class="fb-comments" data-href="https://learn-software.com/software_engineering/sdlc-planning/" data-mobile="true" data-num-posts="5000" data-width="100%" data-colorscheme="dark"></section>
     
 </div>
 

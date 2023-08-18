@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Classes and objects - Learn Software Engineering</title>
-<meta name="description" content="“A place to learn about Software Engineering.”">
+<!-- begin _includes/seo.html --><title>SDLC: The Testing phase - Learn Software Engineering</title>
+<meta name="description" content="Battling bugs and bolstering quality: ensuring software excellence">
 
 
   <meta name="author" content="Julian Nonino">
@@ -22,11 +22,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Learn Software Engineering">
-<meta property="og:title" content="Classes and objects">
-<meta property="og:url" content="https://learn-software.com/oop/classes-objects/">
+<meta property="og:title" content="SDLC: The Testing phase">
+<meta property="og:url" content="https://learn-software.com/software_engineering/sdlc-testing/">
 
 
-  <meta property="og:description" content="“A place to learn about Software Engineering.”">
+  <meta property="og:description" content="Battling bugs and bolstering quality: ensuring software excellence">
 
 
 
@@ -43,7 +43,7 @@
 
 
 
-<link rel="canonical" href="https://learn-software.com/oop/classes-objects/">
+<link rel="canonical" href="https://learn-software.com/software_engineering/sdlc-testing/">
 
 
 
@@ -176,12 +176,12 @@
     <div class="wrapper">
       <h1 id="page-title" class="page__title" itemprop="headline">
         
-          Classes and objects
+          SDLC: The Testing phase
 
         
       </h1>
       
-        <p class="page__lead">
+        <p class="page__lead">Battling bugs and bolstering quality: ensuring software excellence
 </p>
       
       
@@ -205,7 +205,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          2 minute read
+          4 minute read
         
       </span>
     
@@ -362,27 +362,29 @@
     
       <li>
         
-          <span class="nav__sub-title">Object-Oriented Programming</span>
+          <span class="nav__sub-title">Software Engineering</span>
         
 
         
         <ul>
           
-            <li><a href="/oop/intro/">Introduction to OOP</a></li>
+            <li><a href="/software_engineering/intro/">Introduction to Software Engineering</a></li>
           
-            <li><a href="/oop/classes-objects/" class="active">Classes and objects</a></li>
+            <li><a href="/software_engineering/sdlc/">Software Development Life Cycle (SDLC)</a></li>
           
-            <li><a href="/oop/encapsulation/">Encapsulation</a></li>
+            <li><a href="/software_engineering/sdlc-planning/">SDLC: The Planning phase</a></li>
           
-            <li><a href="/oop/inheritance/">Inheritance</a></li>
+            <li><a href="/software_engineering/sdlc-system-design/">SDLC: The System Design phase</a></li>
           
-            <li><a href="/oop/polymorphism/">Polymorphism</a></li>
+            <li><a href="/software_engineering/sdlc-implementation/">SDLC: The Implementation phase</a></li>
           
-            <li><a href="/oop/abstraction/">Abstraction</a></li>
+            <li><a href="/software_engineering/sdlc-testing/" class="active">SDLC: The Testing phase</a></li>
           
-            <li><a href="/oop/associations/">Associations, aggregations, and compositions</a></li>
+            <li><a href="/software_engineering/sdlc-deployment/">SDLC: The Deployment phase</a></li>
           
-            <li><a href="/oop/advanced-concepts/">Advanced concepts</a></li>
+            <li><a href="/software_engineering/sdlc-maintenance/">SDLC: The Maintenance phase</a></li>
+          
+            <li><a href="/software_engineering/requirements-engineering/">Requirements Engineering</a></li>
           
         </ul>
         
@@ -398,8 +400,8 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Classes and objects">
-    <meta itemprop="description" content="">
+    <meta itemprop="headline" content="SDLC: The Testing phase">
+    <meta itemprop="description" content="Battling bugs and bolstering quality: ensuring software excellence">
     <meta itemprop="datePublished" content="2023-08-18T10:57:04+00:00">
     
 
@@ -411,104 +413,165 @@
           <aside class="sidebar__right ">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#definitions">Definitions</a><ul><li><a href="#classes">Classes</a></li><li><a href="#objects">Objects</a></li></ul></li><li><a href="#creating-and-instantiating-classes">Creating and instantiating classes</a><ul><li><a href="#instantiating-a-class">Instantiating a class</a></li></ul></li><li><a href="#constructor">Constructor</a></li><li><a href="#destructor">Destructor</a></li><li><a href="#examples">Examples</a><ul><li><a href="#creating-and-using-a-class">Creating and using a class</a></li><li><a href="#deleting-an-object">Deleting an object</a></li></ul></li><li><a href="#conclusion">Conclusion</a></li></ul>
+              <ul class="toc__menu"><li><a href="#levels-of-testing">Levels of Testing</a></li><li><a href="#key-components">Key components</a></li><li><a href="#testing-types">Testing types</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#references">References</a></li></ul>
 
             </nav>
           </aside>
         
-        <p>Building on our previous introduction to Object-Oriented Programming (OOP), this post will dive deeper into the core concepts of classes and objects. We’ll explore their definitions, how to create and use them, and discuss constructors and destructors, with examples in Python.</p>
+        <p>In the rapidly-evolving domain of software development, delivering a product isn’t the endpoint, it’s a milestone. However, before that milestone can be reached, a rigorous evaluation must ensure the software is robust, user-friendly, and aligns with specified requirements. The torchbearer of this assessment? The testing stage of the Software Development Life Cycle (SDLC). Dive with me into this crucial phase and fathom its depth and expanse.</p>
 
-<h2 id="definitions">Definitions</h2>
+<p>Software testing, at its core, is an activity where software undergoes various forms of evaluation. It’s conducted to ensure that the software adheres to specified requirements and doesn’t demonstrate unwanted behaviors<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>. It is a meticulous blend of logic and creativity: logic to methodically navigate predefined paths and creativity to anticipate unexpected scenarios and user behaviors.</p>
 
-<h3 id="classes">Classes</h3>
+<p>Before diving into its components, let’s recognize the non-negotiable importance of testing in the SDLC.</p>
 
-<p>A class is a blueprint that defines the structure and behavior of an object. It encapsulates data (attributes) and functions (methods) that operate on the data.</p>
+<ul>
+  <li><strong>Risk mitigation:</strong> Flawless software is a myth. Testing identifies defects, ensuring they are addressed before they become critical vulnerabilities.</li>
+  <li><strong>User trust and satisfaction:</strong> Users demand perfection. Rigorous testing ensures that their interactions with the software are seamless, building trust and guaranteeing satisfaction<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup>.</li>
+  <li><strong>Cost efficiency:</strong> Unearthing defects early is cost-effective. Addressing them post-deployment can be exponentially more expensive.</li>
+  <li><strong>Regulatory adherence:</strong> In many sectors, comprehensive software testing is not a choice but a mandatory requirement, ensuring safety, security, and compliance.</li>
+</ul>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Dog</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">bark</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">print</span><span class="p">(</span><span class="s">"Woof!"</span><span class="p">)</span>
-</code></pre></div></div>
+<hr />
 
-<p>Here, <code class="language-plaintext highlighter-rouge">Dog</code> is a class with a method <code class="language-plaintext highlighter-rouge">bark</code>.</p>
+<h2 id="levels-of-testing">Levels of Testing</h2>
 
-<h3 id="objects">Objects</h3>
+<p>Delving deeper into the software testing landscape, there are multiple layers or levels, each serving a unique purpose:</p>
 
-<p>Objects are individual instances created from a class. They contain the data defined in the class and can execute the class’s methods.</p>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Level</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Unit testing</td>
+      <td style="text-align: left">Focusing on the smallest testable parts of the software, unit testing evaluates individual units or components in isolation. It’s the foundational level of testing, ensuring that each building block performs as intended<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Integration testing</td>
+      <td style="text-align: left">Once individual units pass their tests, integration testing takes over. Here, multiple units are combined and tested as a group. The primary aim is to detect interface defects between integrated components<sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">4</a></sup>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">System testing</td>
+      <td style="text-align: left">This is a holistic testing phase where the entire software is evaluated. System testing verifies that the finished product meets the specified requirements and functions correctly in environments that mirror real-world conditions<sup id="fnref:5" role="doc-noteref"><a href="#fn:5" class="footnote" rel="footnote">5</a></sup>.</td>
+    </tr>
+  </tbody>
+</table>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">my_dog</span> <span class="o">=</span> <span class="n">Dog</span><span class="p">()</span>
-<span class="n">my_dog</span><span class="p">.</span><span class="n">bark</span><span class="p">()</span>  <span class="c1"># Output: Woof!
-</span></code></pre></div></div>
+<hr />
 
-<p><code class="language-plaintext highlighter-rouge">my_dog</code> is an object of the class <code class="language-plaintext highlighter-rouge">Dog</code>, and it can use the <code class="language-plaintext highlighter-rouge">bark</code> method.</p>
+<h2 id="key-components">Key components</h2>
 
-<h2 id="creating-and-instantiating-classes">Creating and instantiating classes</h2>
+<p><strong>Test planning</strong></p>
 
-<p>In Python, you can define a class using the <code class="language-plaintext highlighter-rouge">class</code> keyword followed by the class name and a colon.</p>
+<ul>
+  <li><em>Strategic vision:</em> Testing, like every pivotal activity in software development, mandates planning. Test planning chalks out the scope, approach, resources, and schedule of testing activities<sup id="fnref:6" role="doc-noteref"><a href="#fn:6" class="footnote" rel="footnote">6</a></sup>.</li>
+  <li><em>Resource allocation:</em> Relevant tools, team members, and infrastructure for testing are identified and readied.</li>
+  <li><em>Risk analysis:</em> Anticipating potential hurdles, and charting out mitigation plans is vital to navigate any unforeseen challenges.</li>
+</ul>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
-    <span class="k">pass</span>
-</code></pre></div></div>
+<p><strong>Test design</strong></p>
 
-<p>This creates an empty class named <code class="language-plaintext highlighter-rouge">Person</code>.</p>
+<ul>
+  <li><em>Test conditions to test cases:</em> Requirements are translated into tangible test conditions and expected results. This stage turns abstract needs into specific, testable items<sup id="fnref:7" role="doc-noteref"><a href="#fn:7" class="footnote" rel="footnote">7</a></sup>.</li>
+  <li><em>Data creation and scripting:</em> Appropriate test data and automated test scripts are crafted, simulating real-world scenarios and automating repetitive tasks.</li>
+</ul>
 
-<h3 id="instantiating-a-class">Instantiating a class</h3>
+<p><strong>Test execution</strong></p>
 
-<p>Instantiating a class means creating an object from that class. You can do this by calling the class as if it were a function.</p>
+<p>Executing the planned tests, outcomes are gauged against expected results. Discrepancies, or defects, are logged for rectification. This stage may employ manual or automated testing techniques, depending on the nature of the test cases<sup id="fnref:8" role="doc-noteref"><a href="#fn:8" class="footnote" rel="footnote">8</a></sup>.</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">person</span> <span class="o">=</span> <span class="n">Person</span><span class="p">()</span>
-</code></pre></div></div>
+<p><strong>Defect reporting and tracking</strong></p>
 
-<p>Now, <code class="language-plaintext highlighter-rouge">person</code> is an instance of the <code class="language-plaintext highlighter-rouge">Person</code> class.</p>
+<p>Each defect is meticulously documented, detailing its nature, steps to reproduce, and potential impact. Testers collaborate with developers to address these defects, ensuring every discrepancy is resolved before software deployment<sup id="fnref:9" role="doc-noteref"><a href="#fn:9" class="footnote" rel="footnote">9</a></sup>.</p>
 
-<h2 id="constructor">Constructor</h2>
+<p><strong>Regression testing</strong></p>
 
-<p>A constructor is a special method that gets called when you create an object. In Python, it’s defined using the <code class="language-plaintext highlighter-rouge">__init__</code> method.</p>
+<p>As defects are rectified and the software undergoes modifications, regression testing ensures that new changes haven’t adversely affected existing functionalities<sup id="fnref:10" role="doc-noteref"><a href="#fn:10" class="footnote" rel="footnote">10</a></sup>.</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Cat</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
-        <span class="bp">self</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
-        <span class="bp">self</span><span class="p">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">color</span>
-</code></pre></div></div>
+<hr />
 
-<p>This constructor initializes a <code class="language-plaintext highlighter-rouge">Cat</code> object with a name and color.</p>
+<h2 id="testing-types">Testing types</h2>
 
-<h2 id="destructor">Destructor</h2>
+<p>While the aforementioned levels offer a vertical depth, various testing types provide a horizontal expanse, ensuring every facet of software quality is evaluated:</p>
 
-<p>A destructor is a method that gets called when an object is destroyed. In Python, it’s defined using the <code class="language-plaintext highlighter-rouge">__del__</code> method.</p>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Type</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Functional testing</td>
+      <td style="text-align: left">Verifying if the software performs its intended functions.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Performance testing</td>
+      <td style="text-align: left">Gauging software behavior under different conditions, including stress, load, and scalability scenarios.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Usability testing</td>
+      <td style="text-align: left">Assessing the software’s user-friendliness and intuitiveness.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Security testing</td>
+      <td style="text-align: left">Ensuring resilience against malicious threats and breaches.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Compatibility testing</td>
+      <td style="text-align: left">Confirming software compatibility across devices, OSs, and browsers.</td>
+    </tr>
+  </tbody>
+</table>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Cat</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">__del__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="bp">self</span><span class="p">.</span><span class="n">name</span><span class="si">}</span><span class="s"> has been deleted."</span><span class="p">)</span>
-</code></pre></div></div>
-
-<p>This destructor prints a message when a <code class="language-plaintext highlighter-rouge">Cat</code> object is deleted.</p>
-
-<h2 id="examples">Examples</h2>
-
-<h3 id="creating-and-using-a-class">Creating and using a class</h3>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Bike</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">brand</span><span class="p">,</span> <span class="n">model</span><span class="p">):</span>
-        <span class="bp">self</span><span class="p">.</span><span class="n">brand</span> <span class="o">=</span> <span class="n">brand</span>
-        <span class="bp">self</span><span class="p">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">model</span>
-
-    <span class="k">def</span> <span class="nf">display_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"This bike is a </span><span class="si">{</span><span class="bp">self</span><span class="p">.</span><span class="n">brand</span><span class="si">}</span><span class="s"> </span><span class="si">{</span><span class="bp">self</span><span class="p">.</span><span class="n">model</span><span class="si">}</span><span class="s">."</span><span class="p">)</span>
-
-<span class="n">my_bike</span> <span class="o">=</span> <span class="n">Bike</span><span class="p">(</span><span class="s">"Yamaha"</span><span class="p">,</span> <span class="s">"MT-07"</span><span class="p">)</span>
-<span class="n">my_bike</span><span class="p">.</span><span class="n">display_info</span><span class="p">()</span>  <span class="c1"># Output: This bike is a Yamaha MT-07.
-</span></code></pre></div></div>
-
-<h3 id="deleting-an-object">Deleting an object</h3>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">del</span> <span class="n">my_bike</span>  <span class="c1"># This will call the destructor if defined.
-</span></code></pre></div></div>
+<hr />
 
 <h2 id="conclusion">Conclusion</h2>
 
-<p>Classes and objects are foundational concepts in OOP, allowing you to structure code in a way that mirrors real-world entities. Constructors and destructors further add to the lifecycle management of objects. With this understanding, you’re now prepared to delve into more advanced OOP concepts.</p>
+<p>Perceiving the testing stage as merely a filter for defects is an oversimplified perspective. In essence, testing is a robust pillar in the SDLC, ensuring that the end product is not just functional, but optimal. For budding software engineers and developers, understanding the intricacies of this phase is non-negotiable, given its pivotal role in dictating software quality and user satisfaction.</p>
 
-<p>In our next article, we will explore encapsulation, one of the key principles of OOP, and see how it contributes to code organization and security.</p>
+<hr />
+
+<h2 id="references">References</h2>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p>Myers, G. J., Sandler, C., &amp; Badgett, T., 2011. The Art of Software Testing. 3rd ed. Wiley. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:2" role="doc-endnote">
+      <p>Dustin, E., Rashka, J., &amp; Paul, J., 1999. Automated Software Testing: Introduction, Management, and Performance. Addison-Wesley Professional. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:3" role="doc-endnote">
+      <p>Graham, D., &amp; Fewster, M., 2008. Experiences of Test Automation: Case Studies of Software Test Automation. Addison-Wesley. <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:4" role="doc-endnote">
+      <p>Kaner, C., Falk, J., &amp; Nguyen, H. Q., 1999. Testing Computer Software. 2nd ed. Wiley. <a href="#fnref:4" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:5" role="doc-endnote">
+      <p>Kit, E., 1995. Software Testing in the Real World: Improving the Process. Addison-Wesley. <a href="#fnref:5" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:6" role="doc-endnote">
+      <p>Black, R., 2001. Critical Testing Processes: Plan, Prepare, Perform, Perfect. Addison-Wesley. <a href="#fnref:6" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:7" role="doc-endnote">
+      <p>Craig, R. D., &amp; Jaskiel, S. P., 2002. Systematic Software Testing. Artech House. <a href="#fnref:7" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:8" role="doc-endnote">
+      <p>Perry, W. E., 2006. Effective Methods for Software Testing. 3rd ed. Wiley. <a href="#fnref:8" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:9" role="doc-endnote">
+      <p>Jorgensen, P.C., 2002. Software Testing: A Craftsman’s Approach. CRC Press. <a href="#fnref:9" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:10" role="doc-endnote">
+      <p>Patton, R., 2005. Software Testing. 2nd ed. Sams Publishing. <a href="#fnref:10" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
 
         
       </section>
@@ -530,22 +593,22 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Classes+and+objects%20https%3A%2F%2Flearn-software.com%2Foop%2Fclasses-objects%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=SDLC%3A+The+Testing+phase%20https%3A%2F%2Flearn-software.com%2Fsoftware_engineering%2Fsdlc-testing%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flearn-software.com%2Foop%2Fclasses-objects%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flearn-software.com%2Fsoftware_engineering%2Fsdlc-testing%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Flearn-software.com%2Foop%2Fclasses-objects%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Flearn-software.com%2Fsoftware_engineering%2Fsdlc-testing%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/oop/intro/" class="pagination--pager" title="Introduction to OOP
+      <a href="/software_engineering/sdlc-implementation/" class="pagination--pager" title="SDLC: The Implementation phase
 ">Previous</a>
     
     
-      <a href="/oop/encapsulation/" class="pagination--pager" title="Encapsulation
+      <a href="/software_engineering/sdlc-deployment/" class="pagination--pager" title="SDLC: The Deployment phase
 ">Next</a>
     
   </nav>
@@ -557,7 +620,7 @@
   
   
       <h4 class="page__comments-title">Leave a comment</h4>
-      <section class="fb-comments" data-href="https://learn-software.com/oop/classes-objects/" data-mobile="true" data-num-posts="5000" data-width="100%" data-colorscheme="dark"></section>
+      <section class="fb-comments" data-href="https://learn-software.com/software_engineering/sdlc-testing/" data-mobile="true" data-num-posts="5000" data-width="100%" data-colorscheme="dark"></section>
     
 </div>
 
