@@ -39,7 +39,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   <div class="search-input-group">
     <span class="search-input-icon">${p.icons.search}</span>
     <span class="search-spinner">${p.icons.spinner}</span>
-    <input type="search" class="search-input search-form-control" placeholder="${T.translate("input_placeholder")}" disabled/>
+    <input type="search" name="q" class="search-input search-form-control" placeholder="${T.translate("input_placeholder")}" disabled/>
     <button class="search-modal-close" type="button">${T.translate("cancel")}</button>
   </div>
   <div class="search-form-meta">
