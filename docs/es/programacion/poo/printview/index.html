@@ -17,7 +17,7 @@ Auto<svg class="bi ms-auto d-none"><use href="#check2"/></svg></button></li></ul
 </span></span><span style=display:flex><span>  edad <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>
 </span></span></code></pre></div><p><strong>Métodos</strong>: Funciones que definen comportamientos. Por ejemplo, una <code>Persona</code> puede <code>caminar()</code>, <code>hablar()</code>, <code>comer()</code>, etc. Acceden a los atributos para implementar dicha funcionalidad.</p><p><strong>Constructor</strong>: Método especial <code>__init__()</code> que se ejecuta al instanciar la clase y permite inicializar los atributos.</p><p><strong>Destructor</strong>: Método <code>__del__()</code> que se ejecuta al eliminar la instancia liberando recursos. Opcional en algunos lenguajes.</p><hr><h2 id=creando-objetos>Creando objetos</h2><p>A partir de la clase generamos <strong>objetos</strong>, que son <strong>instancias concretas</strong> con sus propios atributos definidos. Digamos que la clase Casa es el plano, y una casa específica en una calle determinada es el objeto.</p><p>En código creamos un objeto invocando la clase como si fuera un método:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#75715e># Clase Persona</span>
 </span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Persona</span>:
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> __init__(self, n, e):
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>__init__</span>(self, n, e):
 </span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>nombre <span style=color:#f92672>=</span> n
 </span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>edad <span style=color:#f92672>=</span> e
 </span></span><span style=display:flex><span>
@@ -28,7 +28,7 @@ Auto<svg class="bi ms-auto d-none"><use href="#check2"/></svg></button></li></ul
 </span></span><span style=display:flex><span>pepe<span style=color:#f92672>.</span>edad    <span style=color:#75715e># 30</span>
 </span></span></code></pre></div><ul><li><strong>Métodos</strong>: De la misma manera en la que se accede a los atributos pero agregando un paréntesis dentro del cual se pasan los argumentos si es que recibe alguno.</li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#75715e># Clase Persona</span>
 </span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Persona</span>:
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> __init__(self, n, e):
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>__init__</span>(self, n, e):
 </span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>nombre <span style=color:#f92672>=</span> n
 </span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>edad <span style=color:#f92672>=</span> e
 </span></span><span style=display:flex><span>
@@ -40,7 +40,7 @@ Auto<svg class="bi ms-auto d-none"><use href="#check2"/></svg></button></li></ul
 </span></span><span style=display:flex><span>pepe<span style=color:#f92672>.</span>comer(<span style=color:#e6db74>&#34;pizza&#34;</span>) <span style=color:#75715e># Imprime &#34;Comiendo pizza&#34;</span>
 </span></span></code></pre></div><p>El objeto pepe tiene ahora <strong>estado</strong> (propiedades) y <strong>comportamiento</strong> (métodos) propios.</p><hr><h2 id=self-vs-this>Self vs This</h2><p>Un detalle importante en los métodos es cómo acceden a los atributos y otros métodos del objeto. Aquí entra otra diferencia entre lenguajes:</p><ul><li><strong>Self</strong>: En Python, los atributos y métodos se acceden dentro de la clase anteponiendo <code>self</code>. Esto apunta al objeto instanciado.</li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Persona</span>:
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>  <span style=color:#66d9ef>def</span> __init__(self, nombre):
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>__init__</span>(self, nombre):
 </span></span><span style=display:flex><span>    self<span style=color:#f92672>.</span>nombre <span style=color:#f92672>=</span> nombre
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>  <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>saludar</span>(self):
@@ -66,7 +66,7 @@ Auto<svg class="bi ms-auto d-none"><use href="#check2"/></svg></button></li></ul
 </span></span><span style=display:flex><span>juan.<span style=color:#a6e22e>saludar</span>();
 </span></span><span style=display:flex><span><span style=color:#75715e>// Imprime &#34;Hola! Soy Juan&#34;</span>
 </span></span></code></pre></div><hr><h2 id=conclusión>Conclusión</h2><p>Las clases y objetos son los conceptos clave de la POO, permitiendo modelar entidades de la realidad y generar componentes modulares y genéricos de nuestro sistema para construir programas más robustos y fáciles de entender y mantener.</p><hr><div class="alert alert-info" role=alert><p>¡Felicitaciones por llegar hasta acá! Espero que este recorrido por el universo de la programación te haya resultado tan interesante como lo fue para mí al escribirlo.</p><p>Queremos conocer tu opinión, así que no dudes en compartir tus comentarios, sugerencias y esas ideas brillantes que seguro tenés.</p><p>Además, para explorar más allá de estas líneas, date una vuelta por los ejemplos prácticos que armamos para vos. Todo el código y los proyectos los encontrarás en nuestro repositorio de GitHub <a href=https://github.com/learn-software-engineering/examples>learn-software-engineering/examples</a>.</p><p>Gracias por ser parte de esta comunidad de aprendizaje. ¡Seguí programando y explorando nuevas areas en este fascinante mundo del software!</p></div><hr></div><div class=td-content style=page-break-before:always><h1 id=pg-706a6da1fb48c7ff0e9f6a58ebc10ae8>2 - Los cuatro pilares</h1><div class=lead>En el corazón de la Programación Orientada a Objetos (POO) se encuentran cuatro conceptos fundamentales: Encapsulamiento, Herencia, Polimorfismo y Abstracción. Estos conceptos, conocidos como los &ldquo;cuatro pilares&rdquo; de la POO, constituyen la base sobre la cual se construyen sistemas de software complejos. En esta guía, profundizaremos en cada uno de estos conceptos, explorando sus definiciones, implementaciones y aplicaciones prácticas. Utilizaremos Python, un lenguaje reconocido por su claridad y versatilidad, para demostrar estos conceptos en acción. Ya seas un principiante que comienza su viaje en la programación o un profesional experimentado que busca refrescar sus conocimientos, este artículo tiene como objetivo proporcionar información valiosa y una comprensión más profunda de los principios de la POO.</div></div><div class=td-content><h1 id=pg-7013247be78705154fc4a62ddab2e991>2.1 - Encapsulamiento</h1><div class=lead>El encapsulamiento es frecuentemente descripto como el primer pilar de la programación orientada a objetos. Es el mecanismo de agrupar los datos (atributos) y los métodos (funciones) que operan sobre esos datos dentro de una única unidad u objeto. Este concepto también se conoce como ocultamiento de datos, ya que la representación interna del objeto se oculta al mundo exterior.</div><p>La importancia del encapsulamiento radica en varios aspectos clave:</p><ol><li><strong>Protección de datos</strong>: Al controlar el acceso a los datos del objeto a través de métodos, podemos asegurar que los datos se mantengan consistentes y válidos.</li><li><strong>Modularidad</strong>: El encapsulamiento permite que los objetos sean autocontenidos, facilitando la comprensión y el mantenimiento del código.</li><li><strong>Flexibilidad</strong>: La implementación interna puede ser modificada sin afectar otras partes del código que utilizan el objeto.</li><li><strong>Reducción de complejidad</strong>: Al ocultar los detalles del funcionamiento interno, el encapsulamiento reduce la complejidad del sistema desde una perspectiva externa.</li></ol><h3 id=implementación-en-python>Implementación en Python</h3><p>Python ofrece varios mecanismos para implementar el encapsulamiento. Exploremos estos con ejemplos:</p><h4 id=1-uso-de-atributos-privados>1. Uso de atributos privados</h4><p>En Python, podemos crear atributos privados prefijando el nombre del atributo con doble guion bajo (<code>__</code>). Esto activa el &ldquo;name mangling&rdquo;, que hace que el atributo sea más difícil de acceder desde fuera de la clase.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>CuentaBancaria</span>:
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> __init__(self, numero_cuenta, saldo):
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>__init__</span>(self, numero_cuenta, saldo):
 </span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>__numero_cuenta <span style=color:#f92672>=</span> numero_cuenta  <span style=color:#75715e># Atributo privado</span>
 </span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>__saldo <span style=color:#f92672>=</span> saldo  <span style=color:#75715e># Atributo privado</span>
 </span></span><span style=display:flex><span>
@@ -96,7 +96,7 @@ Auto<svg class="bi ms-auto d-none"><use href="#check2"/></svg></button></li></ul
 </span></span><span style=display:flex><span><span style=color:#75715e># Esto generará un AttributeError</span>
 </span></span><span style=display:flex><span><span style=color:#75715e># print(cuenta.__saldo)</span>
 </span></span></code></pre></div><p>En este ejemplo:</p><ul><li><code>__numero_cuenta</code> y <code>__saldo</code> son atributos privados.</li><li>Proporcionamos métodos públicos (<code>depositar</code>, <code>retirar</code>, <code>obtener_saldo</code>) para interactuar con estos atributos privados.</li><li>El acceso directo a <code>__saldo</code> desde fuera de la clase generará una excepción <code>AttributeError</code>.</li></ul><h4 id=2-uso-de-propiedades>2. Uso de propiedades</h4><p>El decorador <code>@property</code> de Python nos permite definir métodos que pueden ser accedidos como atributos, proporcionando una forma más pythonica de implementar getters y setters.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Circulo</span>:
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> __init__(self, radio):
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>__init__</span>(self, radio):
 </span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>_radio <span style=color:#f92672>=</span> radio
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>    <span style=color:#a6e22e>@property</span>
@@ -126,7 +126,7 @@ Auto<svg class="bi ms-auto d-none"><use href="#check2"/></svg></button></li></ul
 </span></span><span style=display:flex><span><span style=color:#75715e># Esto generará un ValueError</span>
 </span></span><span style=display:flex><span><span style=color:#75715e># circulo.radio = -1</span>
 </span></span></code></pre></div><p>En este ejemplo:</p><ul><li><code>_radio</code> es un atributo protegido (el guion bajo simple es una convención para atributos protegidos en Python).</li><li>La propiedad <code>radio</code> proporciona acceso de lectura y escritura a <code>_radio</code> con validación.</li><li>La propiedad <code>area</code> es de solo lectura y se calcula al vuelo.</li></ul><h3 id=beneficios-y-mejores-prácticas>Beneficios y mejores prácticas</h3><p>Los beneficios del encapsulamiento son numerosos:</p><ol><li><strong>Mejora de la mantenibilidad</strong>: Los cambios en la implementación interna no afectan al código externo que utiliza la clase.</li><li><strong>Mayor seguridad</strong>: Los atributos privados no pueden ser modificados accidentalmente desde fuera de la clase.</li><li><strong>Flexibilidad en la implementación</strong>: Puedes cambiar cómo se almacenan o calculan los datos sin cambiar la interfaz pública.</li><li><strong>Mejor abstracción</strong>: Los usuarios de la clase no necesitan conocer su funcionamiento interno.</li></ol><p>Las mejores prácticas para el encapsulamiento en Python incluyen:</p><ul><li>Usar atributos privados (prefijo de doble guion bajo) para datos que no deben ser accedidos directamente desde fuera de la clase.</li><li>Proporcionar métodos públicos o propiedades para el acceso controlado a los datos internos.</li><li>Usar propiedades en lugar de métodos get/set para un enfoque más propio del paradigma Python.</li><li>Documentar claramente la interfaz pública, incluyendo cualquier efecto secundario de los métodos.</li></ul><p>Veamos un ejemplo más complejo que demuestra estas prácticas:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Empleado</span>:
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> __init__(self, nombre, salario):
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>__init__</span>(self, nombre, salario):
 </span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>__nombre <span style=color:#f92672>=</span> nombre
 </span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>__salario <span style=color:#f92672>=</span> salario
 </span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>__proyectos <span style=color:#f92672>=</span> []
@@ -170,7 +170,7 @@ Auto<svg class="bi ms-auto d-none"><use href="#check2"/></svg></button></li></ul
 </span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>cantidad_proyectos</span>(self):
 </span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> len(self<span style=color:#f92672>.</span>__proyectos)
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> __str__(self):
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>__str__</span>(self):
 </span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;Empleado: </span><span style=color:#e6db74>{</span>self<span style=color:#f92672>.</span>__nombre<span style=color:#e6db74>}</span><span style=color:#e6db74>, Salario: $</span><span style=color:#e6db74>{</span>self<span style=color:#f92672>.</span>__salario<span style=color:#e6db74>}</span><span style=color:#e6db74>, Proyectos: </span><span style=color:#e6db74>{</span>self<span style=color:#f92672>.</span>cantidad_proyectos<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#75715e># Uso</span>
@@ -191,15 +191,15 @@ Auto<svg class="bi ms-auto d-none"><use href="#check2"/></svg></button></li></ul
 </span></span><span style=display:flex><span><span style=color:#75715e># Esto generará un AttributeError</span>
 </span></span><span style=display:flex><span><span style=color:#75715e># print(emp.__proyectos)</span>
 </span></span></code></pre></div><p>Este ejemplo demuestra:</p><ul><li>Atributos privados (<code>__nombre</code>, <code>__salario</code>, <code>__proyectos</code>)</li><li>Propiedades para acceso controlado (<code>nombre</code>, <code>salario</code>, <code>cantidad_proyectos</code>)</li><li>Métodos públicos para manipular datos privados (<code>agregar_proyecto</code>, <code>eliminar_proyecto</code>)</li><li>Documentación clara del comportamiento de los métodos</li><li>Un método <code>__str__</code> personalizado para una representación de cadena agradable del objeto</li></ul><p>Siguiendo estas prácticas, creamos una clase que es flexible y robusta, encarnando el principio de encapsulamiento.</p><hr><h2 id=referencias>Referencias</h2><ol><li>Gamma, E., Helm, R., Johnson, R., & Vlissides, J. (1994). Design Patterns: Elements of Reusable Object-Oriented Software. Addison-Wesley.</li><li>Martin, R. C. (2017). Clean Architecture: A Craftsman&rsquo;s Guide to Software Structure and Design. Prentice Hall.</li><li>Phillips, D. (2010). Python 3 Object Oriented Programming. Packt Publishing.</li><li>Lutz, M. (2013). Learning Python: Powerful Object-Oriented Programming. O&rsquo;Reilly Media.</li><li>Ramalho, L. (2015). Fluent Python: Clear, Concise, and Effective Programming. O&rsquo;Reilly Media.</li><li>Van Rossum, G., Warsaw, B., & Coghlan, N. (2001). PEP 8 &ndash; Style Guide for Python Code. Python.org. <a href=https://www.python.org/dev/peps/pep-0008/>https://www.python.org/dev/peps/pep-0008/</a></li><li>Python Software Foundation. (n.d.). The Python Standard Library. Python.org. <a href=https://docs.python.org/3/library/>https://docs.python.org/3/library/</a></li></ol><hr><div class="alert alert-info" role=alert><p>¡Felicitaciones por llegar hasta acá! Espero que este recorrido por el universo de la programación te haya resultado tan interesante como lo fue para mí al escribirlo.</p><p>Queremos conocer tu opinión, así que no dudes en compartir tus comentarios, sugerencias y esas ideas brillantes que seguro tenés.</p><p>Además, para explorar más allá de estas líneas, date una vuelta por los ejemplos prácticos que armamos para vos. Todo el código y los proyectos los encontrarás en nuestro repositorio de GitHub <a href=https://github.com/learn-software-engineering/examples>learn-software-engineering/examples</a>.</p><p>Gracias por ser parte de esta comunidad de aprendizaje. ¡Seguí programando y explorando nuevas areas en este fascinante mundo del software!</p></div><hr></div><div class=td-content style=page-break-before:always><h1 id=pg-bca24ca5611fb06a4f87bac302887bc5>2.2 - Herencia</h1><div class=lead>La herencia es un concepto fundamental en la programación orientada a objetos que permite que una nueva clase se base en una clase existente. La nueva clase, conocida como clase derivada o clase hija, hereda atributos y métodos de la clase existente, llamada clase base o clase padre. Este mecanismo promueve la reutilización de código y establece una relación entre clases.</div><p>Los aspectos clave de la herencia incluyen:</p><ol><li><strong>Reutilización de código</strong>: La herencia permite reutilizar código de clases existentes, reduciendo la redundancia y promoviendo un desarrollo eficiente.</li><li><strong>Clasificación jerárquica</strong>: Permite la creación de jerarquías de clases, representando relaciones y características comunes entre objetos.</li><li><strong>Extensibilidad</strong>: Se puede agregar nueva funcionalidad a las clases existentes sin modificarlas, siguiendo el principio abierto-cerrado.</li><li><strong>Polimorfismo</strong>: La herencia es un prerrequisito para el polimorfismo en tiempo de ejecución (que discutiremos en detalle más adelante).</li></ol><h3 id=tipos-de-herencia>Tipos de herencia</h3><p>Existen varios tipos de herencia, aunque no todos los lenguajes de programación admiten todos los tipos. Los principales tipos son:</p><ol><li><strong>Herencia simple</strong>: Una clase derivada hereda de una sola clase base.</li><li><strong>Herencia múltiple</strong>: Una clase derivada hereda de múltiples clases base.</li><li><strong>Herencia multinivel</strong>: Una clase derivada hereda de otra clase derivada.</li><li><strong>Herencia jerárquica</strong>: Múltiples clases derivadas heredan de una sola clase base.</li><li><strong>Herencia híbrida</strong>: Una combinación de dos o más tipos de herencia.</li></ol><p>Python admite todos estos tipos de herencia. Exploremos cada uno con ejemplos.</p><h4 id=herencia-simple>Herencia simple</h4><p>La herencia simple es la forma más básica de herencia, donde una clase hereda de una sola clase base.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Animal</span>:
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> __init__(self, especie):
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>__init__</span>(self, especie):
 </span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>especie <span style=color:#f92672>=</span> especie
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>hacer_sonido</span>(self):
 </span></span><span style=display:flex><span>        <span style=color:#66d9ef>pass</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Perro</span>(Animal):
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> __init__(self, nombre):
-</span></span><span style=display:flex><span>        super()<span style=color:#f92672>.</span>__init__(<span style=color:#e6db74>&#34;Canino&#34;</span>)
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>__init__</span>(self, nombre):
+</span></span><span style=display:flex><span>        super()<span style=color:#f92672>.</span><span style=color:#a6e22e>__init__</span>(<span style=color:#e6db74>&#34;Canino&#34;</span>)
 </span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>nombre <span style=color:#f92672>=</span> nombre
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>hacer_sonido</span>(self):
@@ -218,8 +218,8 @@ Auto<svg class="bi ms-auto d-none"><use href="#check2"/></svg></button></li></ul
 </span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#e6db74>&#34;¡Puedo nadar!&#34;</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Pato</span>(Animal, Volador, Nadador):
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> __init__(self, nombre):
-</span></span><span style=display:flex><span>        Animal<span style=color:#f92672>.</span>__init__(self, <span style=color:#e6db74>&#34;Ave&#34;</span>)
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>__init__</span>(self, nombre):
+</span></span><span style=display:flex><span>        Animal<span style=color:#f92672>.</span><span style=color:#a6e22e>__init__</span>(self, <span style=color:#e6db74>&#34;Ave&#34;</span>)
 </span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>nombre <span style=color:#f92672>=</span> nombre
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>hacer_sonido</span>(self):
@@ -232,16 +232,16 @@ Auto<svg class="bi ms-auto d-none"><use href="#check2"/></svg></button></li></ul
 </span></span><span style=display:flex><span>print(pato<span style=color:#f92672>.</span>volar())  <span style=color:#75715e># Salida: ¡Puedo volar!</span>
 </span></span><span style=display:flex><span>print(pato<span style=color:#f92672>.</span>nadar())  <span style=color:#75715e># Salida: ¡Puedo nadar!</span>
 </span></span></code></pre></div><p>Aquí, <code>Pato</code> hereda de <code>Animal</code>, <code>Volador</code> y <code>Nadador</code>, combinando atributos y métodos de las tres clases.</p><h4 id=herencia-multinivel>Herencia multinivel</h4><p>En la herencia multinivel, una clase derivada hereda de otra clase derivada.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Mamifero</span>(Animal):
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> __init__(self, especie, es_de_sangre_caliente<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>):
-</span></span><span style=display:flex><span>        super()<span style=color:#f92672>.</span>__init__(especie)
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>__init__</span>(self, especie, es_de_sangre_caliente<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>):
+</span></span><span style=display:flex><span>        super()<span style=color:#f92672>.</span><span style=color:#a6e22e>__init__</span>(especie)
 </span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>es_de_sangre_caliente <span style=color:#f92672>=</span> es_de_sangre_caliente
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>dar_a_luz</span>(self):
 </span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#e6db74>&#34;Dando a luz crías vivas&#34;</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Gato</span>(Mamifero):
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> __init__(self, nombre):
-</span></span><span style=display:flex><span>        super()<span style=color:#f92672>.</span>__init__(<span style=color:#e6db74>&#34;Felino&#34;</span>)
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>__init__</span>(self, nombre):
+</span></span><span style=display:flex><span>        super()<span style=color:#f92672>.</span><span style=color:#a6e22e>__init__</span>(<span style=color:#e6db74>&#34;Felino&#34;</span>)
 </span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>nombre <span style=color:#f92672>=</span> nombre
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>hacer_sonido</span>(self):
@@ -254,21 +254,21 @@ Auto<svg class="bi ms-auto d-none"><use href="#check2"/></svg></button></li></ul
 </span></span><span style=display:flex><span>print(gato<span style=color:#f92672>.</span>dar_a_luz())  <span style=color:#75715e># Salida: Dando a luz crías vivas</span>
 </span></span><span style=display:flex><span>print(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;¿Es de sangre caliente? </span><span style=color:#e6db74>{</span>gato<span style=color:#f92672>.</span>es_de_sangre_caliente<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>)  <span style=color:#75715e># Salida: ¿Es de sangre caliente? True</span>
 </span></span></code></pre></div><p>En este ejemplo, <code>Gato</code> hereda de <code>Mamifero</code>, que a su vez hereda de <code>Animal</code>, formando una cadena de herencia multinivel.</p><h4 id=herencia-jerárquica>Herencia jerárquica</h4><p>La herencia jerárquica implica múltiples clases derivadas heredando de una sola clase base.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Ave</span>(Animal):
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> __init__(self, especie, puede_volar<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>):
-</span></span><span style=display:flex><span>        super()<span style=color:#f92672>.</span>__init__(especie)
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>__init__</span>(self, especie, puede_volar<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>):
+</span></span><span style=display:flex><span>        super()<span style=color:#f92672>.</span><span style=color:#a6e22e>__init__</span>(especie)
 </span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>puede_volar <span style=color:#f92672>=</span> puede_volar
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Loro</span>(Ave):
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> __init__(self, nombre):
-</span></span><span style=display:flex><span>        super()<span style=color:#f92672>.</span>__init__(<span style=color:#e6db74>&#34;Psitácido&#34;</span>, puede_volar<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>)
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>__init__</span>(self, nombre):
+</span></span><span style=display:flex><span>        super()<span style=color:#f92672>.</span><span style=color:#a6e22e>__init__</span>(<span style=color:#e6db74>&#34;Psitácido&#34;</span>, puede_volar<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>)
 </span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>nombre <span style=color:#f92672>=</span> nombre
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>hacer_sonido</span>(self):
 </span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#e6db74>&#34;¡Squawk!&#34;</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Pinguino</span>(Ave):
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> __init__(self, nombre):
-</span></span><span style=display:flex><span>        super()<span style=color:#f92672>.</span>__init__(<span style=color:#e6db74>&#34;Esfenisciforme&#34;</span>, puede_volar<span style=color:#f92672>=</span><span style=color:#66d9ef>False</span>)
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>__init__</span>(self, nombre):
+</span></span><span style=display:flex><span>        super()<span style=color:#f92672>.</span><span style=color:#a6e22e>__init__</span>(<span style=color:#e6db74>&#34;Esfenisciforme&#34;</span>, puede_volar<span style=color:#f92672>=</span><span style=color:#66d9ef>False</span>)
 </span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>nombre <span style=color:#f92672>=</span> nombre
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>hacer_sonido</span>(self):
@@ -289,15 +289,15 @@ Auto<svg class="bi ms-auto d-none"><use href="#check2"/></svg></button></li></ul
 </span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#e6db74>&#34;Nadando en el agua&#34;</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Anfibio</span>(Animal, Terrestre, Acuatico):
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> __init__(self, especie):
-</span></span><span style=display:flex><span>        Animal<span style=color:#f92672>.</span>__init__(self, especie)
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>__init__</span>(self, especie):
+</span></span><span style=display:flex><span>        Animal<span style=color:#f92672>.</span><span style=color:#a6e22e>__init__</span>(self, especie)
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>adaptarse</span>(self):
 </span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#e6db74>&#34;Puede sobrevivir tanto en tierra como en agua&#34;</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Rana</span>(Anfibio):
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> __init__(self, nombre):
-</span></span><span style=display:flex><span>        super()<span style=color:#f92672>.</span>__init__(<span style=color:#e6db74>&#34;Anuro&#34;</span>)
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>__init__</span>(self, nombre):
+</span></span><span style=display:flex><span>        super()<span style=color:#f92672>.</span><span style=color:#a6e22e>__init__</span>(<span style=color:#e6db74>&#34;Anuro&#34;</span>)
 </span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>nombre <span style=color:#f92672>=</span> nombre
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>hacer_sonido</span>(self):
@@ -368,7 +368,7 @@ Auto<svg class="bi ms-auto d-none"><use href="#check2"/></svg></button></li></ul
 </span></span><span style=display:flex><span>        <span style=color:#66d9ef>pass</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Rectangulo</span>(Figura):
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> __init__(self, ancho, alto):
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>__init__</span>(self, ancho, alto):
 </span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>ancho <span style=color:#f92672>=</span> ancho
 </span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>alto <span style=color:#f92672>=</span> alto
 </span></span><span style=display:flex><span>
@@ -376,7 +376,7 @@ Auto<svg class="bi ms-auto d-none"><use href="#check2"/></svg></button></li></ul
 </span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> self<span style=color:#f92672>.</span>ancho <span style=color:#f92672>*</span> self<span style=color:#f92672>.</span>alto
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Circulo</span>(Figura):
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> __init__(self, radio):
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>__init__</span>(self, radio):
 </span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>radio <span style=color:#f92672>=</span> radio
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>area</span>(self):
@@ -392,14 +392,14 @@ Auto<svg class="bi ms-auto d-none"><use href="#check2"/></svg></button></li></ul
 </span></span><span style=display:flex><span><span style=color:#75715e># Área: 20</span>
 </span></span><span style=display:flex><span><span style=color:#75715e># Área: 28.27431</span>
 </span></span></code></pre></div><p>Aquí, <code>Rectangulo</code> y <code>Circulo</code> sobrescriben el método <code>area()</code> de la clase <code>Figura</code>.</p><h3 id=sobrecarga-de-operadores>Sobrecarga de operadores</h3><p>Python permite la sobrecarga de operadores, que es una forma de polimorfismo en tiempo de compilación. Permite que el mismo operador tenga diferentes significados según los operandos.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Vector</span>:
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> __init__(self, x, y):
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>__init__</span>(self, x, y):
 </span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>x <span style=color:#f92672>=</span> x
 </span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>y <span style=color:#f92672>=</span> y
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> __add__(self, otro):
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>__add__</span>(self, otro):
 </span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> Vector(self<span style=color:#f92672>.</span>x <span style=color:#f92672>+</span> otro<span style=color:#f92672>.</span>x, self<span style=color:#f92672>.</span>y <span style=color:#f92672>+</span> otro<span style=color:#f92672>.</span>y)
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> __str__(self):
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>__str__</span>(self):
 </span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;Vector(</span><span style=color:#e6db74>{</span>self<span style=color:#f92672>.</span>x<span style=color:#e6db74>}</span><span style=color:#e6db74>, </span><span style=color:#e6db74>{</span>self<span style=color:#f92672>.</span>y<span style=color:#e6db74>}</span><span style=color:#e6db74>)&#34;</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#75715e># Uso</span>
@@ -449,7 +449,7 @@ Auto<svg class="bi ms-auto d-none"><use href="#check2"/></svg></button></li></ul
 </span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> datos[::<span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>]
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Aplicacion</span>:
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> __init__(self):
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>__init__</span>(self):
 </span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>plugins <span style=color:#f92672>=</span> []
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>agregar_plugin</span>(self, plugin):
@@ -479,7 +479,7 @@ Auto<svg class="bi ms-auto d-none"><use href="#check2"/></svg></button></li></ul
 </span></span><span style=display:flex><span>        <span style=color:#66d9ef>pass</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Rectangulo</span>(Figura):
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> __init__(self, ancho, alto):
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>__init__</span>(self, ancho, alto):
 </span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>ancho <span style=color:#f92672>=</span> ancho
 </span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>alto <span style=color:#f92672>=</span> alto
 </span></span><span style=display:flex><span>
@@ -490,7 +490,7 @@ Auto<svg class="bi ms-auto d-none"><use href="#check2"/></svg></button></li></ul
 </span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#ae81ff>2</span> <span style=color:#f92672>*</span> (self<span style=color:#f92672>.</span>ancho <span style=color:#f92672>+</span> self<span style=color:#f92672>.</span>alto)
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Circulo</span>(Figura):
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> __init__(self, radio):
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>__init__</span>(self, radio):
 </span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>radio <span style=color:#f92672>=</span> radio
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>area</span>(self):
@@ -564,7 +564,7 @@ Auto<svg class="bi ms-auto d-none"><use href="#check2"/></svg></button></li></ul
 </span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> sorted(datos)  <span style=color:#75715e># Usamos sorted() de Python por simplicidad</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Ordenador</span>:
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> __init__(self, estrategia):
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>__init__</span>(self, estrategia):
 </span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>estrategia <span style=color:#f92672>=</span> estrategia
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>ordenar</span>(self, datos):
