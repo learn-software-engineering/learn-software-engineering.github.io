@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://learn-software.com/sitemap.xml
