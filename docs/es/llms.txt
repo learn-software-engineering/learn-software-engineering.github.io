@@ -60,5 +60,5 @@ Dato o información … - Published 2023-11-01
 - [Acerca de](https://learn-software.com/es/about/): 
 
 ---
-Generated on 2026-03-17 00:12:30 UTC
+Generated on 2026-03-17 15:42:44 UTC
 Site: https://learn-software.com/
