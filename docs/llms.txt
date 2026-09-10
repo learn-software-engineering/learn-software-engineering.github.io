@@ -78,5 +78,5 @@ Data or information Reference to … - Published 2023-11-01
 - [About](https://learn-software.com/about/): 
 
 ---
-Generated on 2026-09-07 22:57:27 UTC
+Generated on 2026-09-10 14:20:15 UTC
 Site: https://learn-software.com/
